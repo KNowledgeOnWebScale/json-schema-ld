@@ -44,7 +44,7 @@ Keywords that are supported by JSC-LD can be found [Supported JSON Schema keywor
 
 ### contribute
 
-Do not hesitate to [report a bug](https://github.com/jiaoxlong/jsc-ld/issues).
+Do not hesitate to [report a bug](https://github.com/SolidLabResearch/json-schema-ld/issues).
 
 ### Lisense
 
