@@ -48,7 +48,7 @@ sdm:cameraType dcterms:description "Property. Model:'https://schema.org/Text'. T
     rdfs:domain <https://smart-data-models.github.io/CrossSector/Camera/schema.json>.
 sdm:CameraType rdf:type skos:ConceptScheme.
 sdm:cameraType rdfs:range [
-  owl:oneOf (sdm:FIXED sdm:PTZ sdm:DOME <sdm:DAY/NIGHT> sdm:C-MOUNT sdm:BULLET)
+  owl:oneOf (sdm:FIXED sdm:PTZ sdm:DOME sdm:DAY%2FNIGHT sdm:C-MOUNT sdm:BULLET)
 ].
 sdm:FIXED rdf:type skos:Concept;
     skos:inScheme sdm:CameraType;
@@ -59,7 +59,7 @@ sdm:PTZ rdf:type skos:Concept;
 sdm:DOME rdf:type skos:Concept;
     skos:inScheme sdm:CameraType;
     rdfs:label "DOME".
-<sdm:DAY/NIGHT> rdf:type skos:Concept;
+sdm:DAY%2FNIGHT rdf:type skos:Concept;
     skos:inScheme sdm:CameraType;
     rdfs:label "DAY/NIGHT".
 sdm:C-MOUNT rdf:type skos:Concept;

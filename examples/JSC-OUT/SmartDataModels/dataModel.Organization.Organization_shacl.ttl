@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/DataModel.Organization/Organization/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be Organization";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. The average rating based on multiple ratings or reviews. Privacy:'low'";
   sh:name "aggregateRating"
 ].
-sdm:AggregateRatingShape rdf:type sh:NodeShape;
+sdmshape:AggregateRatingShape rdf:type sh:NodeShape;
     sh:targetClass sdm:AggregateRating;
     sh:property [
   sh:path sdm:itemReviewed;
@@ -50,7 +50,7 @@ sdm:AggregateRatingShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:author;
   sh:description "Relationship. Model:'https://schema.org/URL'. The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.";
   sh:name "author";

@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-model.WaterNetworkManagementEPANET/Simulation/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be SimulationScenario";
   sh:name "type";
@@ -247,7 +247,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. The operational control of de item";
   sh:name "operationalControl"
 ].
-sdm:OperationalControlShape rdf:type sh:NodeShape;
+sdmshape:OperationalControlShape rdf:type sh:NodeShape;
     sh:targetClass sdm:OperationalControl;
     sh:property [
   sh:path sdm:type;
@@ -288,12 +288,12 @@ sdm:OperationalControlShape rdf:type sh:NodeShape;
   sh:datatype xsd:string
 ] [ sh:datatype xsd:anyURI ])
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:inputParameter;
   sh:description "Property. Model:'https://Text'. Description of the set of modifications to be applied to the network for the simulation";
   sh:name "inputParameter"
 ].
-sdm:InputParameterShape rdf:type sh:NodeShape;
+sdmshape:InputParameterShape rdf:type sh:NodeShape;
     sh:targetClass sdm:InputParameter;
     sh:property [
   sh:path sdm:parameterName;

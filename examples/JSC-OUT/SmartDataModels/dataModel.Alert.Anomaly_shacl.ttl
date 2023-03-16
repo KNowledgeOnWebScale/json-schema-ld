@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/incubated/Anomaly/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be Anomaly";
   sh:name "type";
@@ -44,7 +44,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text'. Description of an observed threshold breach that contributed to detection of an anomaly";
   sh:name "thresholdBreach"
 ].
-sdm:ThresholdBreachShape rdf:type sh:NodeShape;
+sdmshape:ThresholdBreachShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ThresholdBreach;
     sh:property [
   sh:path sdm:dateObserved;

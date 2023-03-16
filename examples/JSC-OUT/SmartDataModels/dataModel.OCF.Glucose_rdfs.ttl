@@ -37,12 +37,12 @@ sdm:units dcterms:description "Property. Glucose unit";
     rdfs:domain <https://smart-data-models.github.io/dataModel.OCF/Glucose/schema.json>.
 sdm:Units rdf:type skos:ConceptScheme.
 sdm:units rdfs:range [
-  owl:oneOf (<sdm:mg/dL> <sdm:mmol/L>)
+  owl:oneOf (sdm:mg%2FdL sdm:mmol%2FL)
 ].
-<sdm:mg/dL> rdf:type skos:Concept;
+sdm:mg%2FdL rdf:type skos:Concept;
     skos:inScheme sdm:Units;
     rdfs:label "mg/dL".
-<sdm:mmol/L> rdf:type skos:Concept;
+sdm:mmol%2FL rdf:type skos:Concept;
     skos:inScheme sdm:Units;
     rdfs:label "mmol/L".
 sdm:range rdf:type rdf:Property;

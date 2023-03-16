@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/smart-data-models/dataModel.OSLO/raw/master/BicycleParkingStationForecast/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be BicycleParkingStation";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Capacity of a civic structure. Model:'http://schema.mobivoc.org/#capacity'. ";
   sh:name "ParkingFacility.capacity"
 ].
-sdm:ParkingFacility.capacityShape rdf:type sh:NodeShape;
+sdmshape:ParkingFacility.capacityShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ParkingFacility.capacity;
     sh:property [
   sh:path sdm:type;
@@ -41,12 +41,12 @@ sdm:ParkingFacility.capacityShape rdf:type sh:NodeShape;
   sh:maxCount 1;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:InfrastructureElement.geometry;
   sh:description "Property. Model:'http://www.w3.org/ns/locn#geometry'. The geometry corresponding to the infrastructure element.";
   sh:name "InfrastructureElement.geometry"
 ].
-sdm:InfrastructureElement.geometryShape rdf:type sh:NodeShape;
+sdmshape:InfrastructureElement.geometryShape rdf:type sh:NodeShape;
     sh:targetClass sdm:InfrastructureElement.geometry;
     sh:property [
   sh:path sdm:type;
@@ -63,7 +63,7 @@ sdm:InfrastructureElement.geometryShape rdf:type sh:NodeShape;
   sh:maxCount 1;
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:validity;
   sh:description "Property. Model:'https://schema.org/Text'. Includes the validity period for this forecast as a ISO8601 time interval. It can be also used two separate attributes: `validFrom`, `validTo`.";
   sh:name "validity";

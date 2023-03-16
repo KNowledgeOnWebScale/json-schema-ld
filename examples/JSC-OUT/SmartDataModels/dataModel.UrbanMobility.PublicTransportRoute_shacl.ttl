@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be PublicTransportRoute";
   sh:name "type";
@@ -54,7 +54,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Segments of this route defined by their name and stops.";
   sh:name "routeSegments"
 ].
-sdm:RouteSegmentShape rdf:type sh:NodeShape;
+sdmshape:RouteSegmentShape rdf:type sh:NodeShape;
     sh:targetClass sdm:RouteSegment;
     sh:property [
   sh:path sdm:segmentName;
@@ -69,7 +69,7 @@ sdm:RouteSegmentShape rdf:type sh:NodeShape;
   sh:description "Property. Working hours of this route. Model:'https://schema.org/OpeningHoursSpecification'.";
   sh:name "schedule"
 ].
-sdm:ScheduleShape rdf:type sh:NodeShape;
+sdmshape:ScheduleShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Schedule;
     sh:property [
   sh:path sdm:opens;

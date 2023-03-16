@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity Type. It has to be AgriGreenhouse";
   sh:name "type";
@@ -95,7 +95,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'http://schema.org/Number'. Units:'L/s'. The observed drain flow rate in litres per second";
   sh:name "drainFlow"
 ].
-sdm:DrainFlowShape rdf:type sh:NodeShape;
+sdmshape:DrainFlowShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DrainFlow;
     sh:property [
   sh:path sdm:value;

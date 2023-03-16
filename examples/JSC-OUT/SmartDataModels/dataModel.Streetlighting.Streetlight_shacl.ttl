@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Streetlighting/Streetlight/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be Streetlight";
   sh:name "type";
@@ -187,7 +187,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"
 ].
-sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
+sdmshape:MunicipalityInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MunicipalityInfo;
     sh:property [
   sh:path sdm:district;
@@ -225,12 +225,12 @@ sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
   sh:name "wardNum";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:deviceInfo;
   sh:description "Property. Model:'https://schema.org/Text. Information about the device associated with the observations.";
   sh:name "deviceInfo"
 ].
-sdm:DeviceInfoShape rdf:type sh:NodeShape;
+sdmshape:DeviceInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DeviceInfo;
     sh:property [
   sh:path sdm:RFId;
@@ -267,7 +267,7 @@ sdm:DeviceInfoShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Text'. Describes the information of the device, sensor or system in consideration.";
   sh:name "deviceModel"
 ].
-sdm:DeviceModelShape rdf:type sh:NodeShape;
+sdmshape:DeviceModelShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DeviceModel;
     sh:property [
   sh:path sdm:brandName;

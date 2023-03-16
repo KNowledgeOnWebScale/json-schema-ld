@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It has to be OffStreetParking";
   sh:name "type";
@@ -156,9 +156,9 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Parking site service provider. Model:'https://schema.org/provider'";
   sh:name "provider"
 ].
-sdm:ProviderShape rdf:type sh:NodeShape;
+sdmshape:ProviderShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Provider.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:measuresPeriod;
   sh:description "Property. Model:'http://schema.org/Number'. The measures period related to availableSpotNumber and priceRatePerMinute.";
   sh:name "measuresPeriod";
@@ -173,9 +173,9 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/contactPoint'. Parking site contact point.";
   sh:name "contactPoint"
 ].
-sdm:ContactPointShape rdf:type sh:NodeShape;
+sdmshape:ContactPointShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ContactPoint.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:averageSpotWidth;
   sh:description "Property. Model:'http://schema.org/width'. Units:'meters'. The average width of parking spots.";
   sh:name "averageSpotWidth";
@@ -231,9 +231,9 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/aggregateRating'. Aggregated rating for this parking site.";
   sh:name "aggregateRating"
 ].
-sdm:AggregateRatingShape rdf:type sh:NodeShape;
+sdmshape:AggregateRatingShape rdf:type sh:NodeShape;
     sh:targetClass sdm:AggregateRating.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:vehicleEntranceCount;
   sh:description "Property. Model:'http://schema.org/Number'. Aggregated number of vehicle that enter the parking site in a period of time.";
   sh:name "vehicleEntranceCount";
@@ -274,7 +274,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text. Four wheeler parking spot availability status in parking site corresponding to this observation.";
   sh:name "fourWheelerSlots"
 ].
-sdm:FourWheelerSlotShape rdf:type sh:NodeShape;
+sdmshape:FourWheelerSlotShape rdf:type sh:NodeShape;
     sh:targetClass sdm:FourWheelerSlot;
     sh:property [
   sh:path sdm:availableSlotNumber;
@@ -292,12 +292,12 @@ sdm:FourWheelerSlotShape rdf:type sh:NodeShape;
   sh:name "occupiedSlotNumber";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:unclassifiedSlots;
   sh:description "Property. Model:'https://schema.org/Text. Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.";
   sh:name "unclassifiedSlots"
 ].
-sdm:UnclassifiedSlotShape rdf:type sh:NodeShape;
+sdmshape:UnclassifiedSlotShape rdf:type sh:NodeShape;
     sh:targetClass sdm:UnclassifiedSlot;
     sh:property [
   sh:path sdm:availableSpotNumber;
@@ -315,12 +315,12 @@ sdm:UnclassifiedSlotShape rdf:type sh:NodeShape;
   sh:name "occupiedSpotNumber";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:twoWheelerSlots;
   sh:description "Property. Model:'https://schema.org/Text. Two wheeler parking spot availability status in parking site corresponding to this observation.";
   sh:name "twoWheelerSlots"
 ].
-sdm:TwoWheelerSlotShape rdf:type sh:NodeShape;
+sdmshape:TwoWheelerSlotShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TwoWheelerSlot;
     sh:property [
   sh:path sdm:availableSpotNumber;
@@ -338,12 +338,12 @@ sdm:TwoWheelerSlotShape rdf:type sh:NodeShape;
   sh:name "occupiedSpotNumber";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:municipalityInfo;
   sh:description "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"
 ].
-sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
+sdmshape:MunicipalityInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MunicipalityInfo;
     sh:property [
   sh:path sdm:district;

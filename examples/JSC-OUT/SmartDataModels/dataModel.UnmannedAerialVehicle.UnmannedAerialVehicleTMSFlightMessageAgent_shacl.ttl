@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleTMSFlightMessageAgent/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity identifier. It has to be UnmannedAerialVehicleTMSFlightMessageAgent";
   sh:name "type";
@@ -57,7 +57,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. A flight message describing the current flight status encoded as a Global UTM Message encoded as a JSON object. https://bitbucket.org/global_utm/flight-declaration-protocol";
   sh:name "flightMessage"
 ].
-sdm:FlightMessageShape rdf:type sh:NodeShape;
+sdmshape:FlightMessageShape rdf:type sh:NodeShape;
     sh:targetClass sdm:FlightMessage;
     sh:property [
   sh:path sdm:flightId;
@@ -71,7 +71,7 @@ sdm:FlightMessageShape rdf:type sh:NodeShape;
   sh:path sdm:flightDeclaration;
   sh:name "flightDeclaration"
 ].
-sdm:FlightDeclarationShape rdf:type sh:NodeShape;
+sdmshape:FlightDeclarationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:FlightDeclaration;
     sh:property [
   sh:path sdm:parts;

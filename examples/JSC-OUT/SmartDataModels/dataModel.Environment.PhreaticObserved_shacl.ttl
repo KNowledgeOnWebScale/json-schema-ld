@@ -13,7 +13,7 @@
 
 sdmshape:jsonShape rdf:type sh:NodeShape;
     sh:targetClass sdm:json.
-sdm:jsonShape sh:property [
+sdmshape:jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be PhreaticObserved";
   sh:name "type";

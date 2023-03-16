@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.KeyPerformanceIndicator/keyPerformanceIndicator/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It must be KeyPerformanceIndicator. Enum:'KeyPerformanceIndicator'";
   sh:name "type";
@@ -74,7 +74,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property.  Entity(ies) and attribute(s) aggregated by the KPI.";
   sh:name "aggregatedData"
 ].
-sdm:AggregatedDatumShape rdf:type sh:NodeShape;
+sdmshape:AggregatedDatumShape rdf:type sh:NodeShape;
     sh:targetClass sdm:AggregatedDatum;
     sh:property [
   sh:path sdm:entityType;
@@ -89,7 +89,7 @@ sdm:AggregatedDatumShape rdf:type sh:NodeShape;
   sh:description "Property. KPI's period of time.";
   sh:name "calculationPeriod"
 ].
-sdm:CalculationPeriodShape rdf:type sh:NodeShape;
+sdmshape:CalculationPeriodShape rdf:type sh:NodeShape;
     sh:targetClass sdm:CalculationPeriod;
     sh:property [
   sh:path sdm:from;
@@ -100,7 +100,7 @@ sdm:CalculationPeriodShape rdf:type sh:NodeShape;
   sh:name "to";
   sh:datatype xsd:date
 ].
-sdm:AggregatedDatumShape sh:property [
+sdmshape:AggregatedDatumShape sh:property [
   sh:path sdm:currentStanding;
   sh:description "Property. The KPI's current standing as per its kpiValue. Allowed values: one Of (very good, good, fair, bad, very bad)";
   sh:name "currentStanding";

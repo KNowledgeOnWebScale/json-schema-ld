@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/OpenChannelFlowRegulation/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be OpenChannelFlowRegulation.";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Reference to the ID of an entity of type Regulation structure";
   sh:name "hasRegulationStructures"
 ].
-sdm:HasRegulationStructureShape rdf:type sh:NodeShape;
+sdmshape:HasRegulationStructureShape rdf:type sh:NodeShape;
     sh:targetClass sdm:HasRegulationStructure;
     sh:property [
   sh:path sdm:targetURI;
@@ -40,12 +40,12 @@ sdm:HasRegulationStructureShape rdf:type sh:NodeShape;
   sh:description "Property. Identifier format of any NGSI entity"
 ])
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:hasStructuresSimulations;
   sh:description "Property. Reference to the ID of an entity of type Regulation Structure Simulation";
   sh:name "hasStructuresSimulations"
 ].
-sdm:HasStructuresSimulationShape rdf:type sh:NodeShape;
+sdmshape:HasStructuresSimulationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:HasStructuresSimulation;
     sh:property [
   sh:path sdm:targetURI;
@@ -60,7 +60,7 @@ sdm:HasStructuresSimulationShape rdf:type sh:NodeShape;
   sh:description "Property. Identifier format of any NGSI entity"
 ])
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:runBy;
   sh:or ([
   sh:minLength 1;

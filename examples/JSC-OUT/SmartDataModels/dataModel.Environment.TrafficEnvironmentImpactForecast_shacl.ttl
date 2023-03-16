@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Environment/TrafficEnvironmentImpactForecast/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI type. It has to be TrafficEnvironmentImpactForecast";
   sh:name "type";
@@ -50,7 +50,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Array of objects containing the expected values for intensity, occupation an speed of the different vehicle types";
   sh:name "traffic"
 ].
-sdm:TrafficShape rdf:type sh:NodeShape;
+sdmshape:TrafficShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Traffic;
     sh:property [
   sh:path sdm:vehicleClass;

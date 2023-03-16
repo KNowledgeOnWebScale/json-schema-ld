@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. Entity type. It must be equal to OnStreetParking";
   sh:name "type";
@@ -37,9 +37,9 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is a structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org";
   sh:name "permitActiveHours"
 ].
-sdm:PermitActiveHourShape rdf:type sh:NodeShape;
+sdmshape:PermitActiveHourShape rdf:type sh:NodeShape;
     sh:targetClass sdm:PermitActiveHour.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:maximumParkingDuration;
   sh:description "Property. Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.";
   sh:name "maximumParkingDuration";
@@ -144,7 +144,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text. Four wheeler parking spot availability status in parking site corresponding to this observation.";
   sh:name "fourWheelerSlots"
 ].
-sdm:FourWheelerSlotShape rdf:type sh:NodeShape;
+sdmshape:FourWheelerSlotShape rdf:type sh:NodeShape;
     sh:targetClass sdm:FourWheelerSlot;
     sh:property [
   sh:path sdm:availableSlotNumber;
@@ -162,12 +162,12 @@ sdm:FourWheelerSlotShape rdf:type sh:NodeShape;
   sh:name "occupiedSlotNumber";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:unclassifiedSlots;
   sh:description "Property. Model:'https://schema.org/Text. Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.";
   sh:name "unclassifiedSlots"
 ].
-sdm:UnclassifiedSlotShape rdf:type sh:NodeShape;
+sdmshape:UnclassifiedSlotShape rdf:type sh:NodeShape;
     sh:targetClass sdm:UnclassifiedSlot;
     sh:property [
   sh:path sdm:availableSpotNumber;
@@ -185,12 +185,12 @@ sdm:UnclassifiedSlotShape rdf:type sh:NodeShape;
   sh:name "occupiedSpotNumber";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:twoWheelerSlots;
   sh:description "Property. Model:'https://schema.org/Text. Two wheeler parking spot availability status in parking site corresponding to this observation.";
   sh:name "twoWheelerSlots"
 ].
-sdm:TwoWheelerSlotShape rdf:type sh:NodeShape;
+sdmshape:TwoWheelerSlotShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TwoWheelerSlot;
     sh:property [
   sh:path sdm:availableSpotNumber;
@@ -208,12 +208,12 @@ sdm:TwoWheelerSlotShape rdf:type sh:NodeShape;
   sh:name "occupiedSpotNumber";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:municipalityInfo;
   sh:description "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"
 ].
-sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
+sdmshape:MunicipalityInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MunicipalityInfo;
     sh:property [
   sh:path sdm:district;

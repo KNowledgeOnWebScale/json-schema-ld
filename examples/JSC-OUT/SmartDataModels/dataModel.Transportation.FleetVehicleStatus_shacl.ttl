@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity identifier. It has to be FleetVehicleStatus";
   sh:name "type";
@@ -64,7 +64,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. The current operative (e.g. driver) of the vehicle described as a Schema.org  person. Model:'https://schema.org/Person'";
   sh:name "currentOperative"
 ].
-sdm:CurrentOperativeShape rdf:type sh:NodeShape;
+sdmshape:CurrentOperativeShape rdf:type sh:NodeShape;
     sh:targetClass sdm:CurrentOperative;
     sh:property [
   sh:path sdm:givenName;
@@ -75,7 +75,7 @@ sdm:CurrentOperativeShape rdf:type sh:NodeShape;
   sh:name "jobTitle";
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:speed;
   sh:description "Property. The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained. Units:'km/h'";
   sh:name "speed";

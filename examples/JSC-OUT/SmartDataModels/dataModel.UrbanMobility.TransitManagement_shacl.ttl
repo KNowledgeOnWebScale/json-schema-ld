@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be TransitManagement";
   sh:name "type";
@@ -35,7 +35,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. A descriptor of realtime update on the schedule of a vehicle along a trip.";
   sh:name "trip_details"
 ].
-sdm:TripDetailShape rdf:type sh:NodeShape;
+sdmshape:TripDetailShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TripDetail;
     sh:property [
   sh:path sdm:bearing;
@@ -53,12 +53,12 @@ sdm:TripDetailShape rdf:type sh:NodeShape;
   sh:name "speed";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:position;
   sh:description "Property. Describes the current position of the vehicle corresponding to this observation. SameAs: position field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition). Model:'https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition'";
   sh:name "position"
 ].
-sdm:PositionShape rdf:type sh:NodeShape;
+sdmshape:PositionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Position;
     sh:property [
   sh:path sdm:latitude;
@@ -86,7 +86,7 @@ sdm:PositionShape rdf:type sh:NodeShape;
   sh:name "speed";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:trip_delay;
   sh:description "Property. This can be positive and negative in seconds and shows how much the vehicle deviates from the planned one. SameAs: 'delay' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)";
   sh:name "trip_delay";
@@ -126,7 +126,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Describes the stop sequence for a trip in the designated route made by the public transit vehicle.SameAs: 'stop_sequence' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)";
   sh:name "stop_sequence_detail"
 ].
-sdm:StopSequenceDetailShape rdf:type sh:NodeShape;
+sdmshape:StopSequenceDetailShape rdf:type sh:NodeShape;
     sh:targetClass sdm:StopSequenceDetail;
     sh:property [
   sh:path sdm:stop_sequence;
@@ -139,12 +139,12 @@ sdm:StopSequenceDetailShape rdf:type sh:NodeShape;
   sh:name "stop_id";
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:stop_time_update;
   sh:description "Property. Additional information on the vehicle that is serving this trip.";
   sh:name "stop_time_update"
 ].
-sdm:StopTimeUpdateShape rdf:type sh:NodeShape;
+sdmshape:StopTimeUpdateShape rdf:type sh:NodeShape;
     sh:targetClass sdm:StopTimeUpdate;
     sh:property [
   sh:path sdm:stop_id;
@@ -166,7 +166,7 @@ sdm:StopTimeUpdateShape rdf:type sh:NodeShape;
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate - both fields cannot be empty. arrival and departure may both be empty when schedule_relationship is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must be empty.";
   sh:name "arrival"
 ].
-sdm:ArrivalShape rdf:type sh:NodeShape;
+sdmshape:ArrivalShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Arrival;
     sh:property [
   sh:path sdm:uncertainty;
@@ -174,12 +174,12 @@ sdm:ArrivalShape rdf:type sh:NodeShape;
   sh:name "uncertainty";
   sh:datatype xsd:decimal
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:departure;
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate - both fields cannot be empty. arrival and departure may both be empty when schedule_relationship is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must be empty.";
   sh:name "departure"
 ].
-sdm:DepartureShape rdf:type sh:NodeShape;
+sdmshape:DepartureShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Departure;
     sh:property [
   sh:path sdm:uncertainty;
@@ -187,19 +187,19 @@ sdm:DepartureShape rdf:type sh:NodeShape;
   sh:name "uncertainty";
   sh:datatype xsd:decimal
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:trip_update;
   sh:description "Property. Describes the trip information like delay, departures, etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity).";
   sh:name "trip_update"
 ].
-sdm:TripUpdateShape rdf:type sh:NodeShape;
+sdmshape:TripUpdateShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TripUpdate;
     sh:property [
   sh:path sdm:stop_time_update;
   sh:description "Property. Additional information on the vehicle that is serving this trip.";
   sh:name "stop_time_update"
 ].
-sdm:StopTimeUpdateShape rdf:type sh:NodeShape;
+sdmshape:StopTimeUpdateShape rdf:type sh:NodeShape;
     sh:targetClass sdm:StopTimeUpdate;
     sh:property [
   sh:path sdm:stop_id;
@@ -221,7 +221,7 @@ sdm:StopTimeUpdateShape rdf:type sh:NodeShape;
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate - both fields cannot be empty. arrival and departure may both be empty when schedule_relationship is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must be empty.";
   sh:name "arrival"
 ].
-sdm:ArrivalShape rdf:type sh:NodeShape;
+sdmshape:ArrivalShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Arrival;
     sh:property [
   sh:path sdm:uncertainty;
@@ -229,12 +229,12 @@ sdm:ArrivalShape rdf:type sh:NodeShape;
   sh:name "uncertainty";
   sh:datatype xsd:decimal
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:departure;
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate - both fields cannot be empty. arrival and departure may both be empty when schedule_relationship is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must be empty.";
   sh:name "departure"
 ].
-sdm:DepartureShape rdf:type sh:NodeShape;
+sdmshape:DepartureShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Departure;
     sh:property [
   sh:path sdm:uncertainty;
@@ -242,7 +242,7 @@ sdm:DepartureShape rdf:type sh:NodeShape;
   sh:name "uncertainty";
   sh:datatype xsd:decimal
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:timestamp;
   sh:description "Property. Last reported time of observation from the vehicle. SameAs: 'timestamp' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "timestamp";
@@ -252,7 +252,7 @@ sdm:StopTimeUpdateShape sh:property [
   sh:description "Property. Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).";
   sh:name "vehicleDesc"
 ].
-sdm:VehicleDescShape rdf:type sh:NodeShape;
+sdmshape:VehicleDescShape rdf:type sh:NodeShape;
     sh:targetClass sdm:VehicleDesc;
     sh:property [
   sh:path sdm:vehicle_id;
@@ -270,12 +270,12 @@ sdm:VehicleDescShape rdf:type sh:NodeShape;
   sh:name "license_plate";
   sh:datatype xsd:string
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:trip;
   sh:description "Property. Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).";
   sh:name "trip"
 ].
-sdm:TripShape rdf:type sh:NodeShape;
+sdmshape:TripShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Trip;
     sh:property [
   sh:path sdm:direction_id;
@@ -308,7 +308,7 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:name "trip_id";
   sh:datatype xsd:string
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:vehicle_id;
   sh:description "Property. Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)";
   sh:name "vehicle_id";
@@ -348,7 +348,7 @@ sdm:StopTimeUpdateShape sh:property [
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'arrival' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)";
   sh:name "arrival"
 ].
-sdm:ArrivalShape rdf:type sh:NodeShape;
+sdmshape:ArrivalShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Arrival;
     sh:property [
   sh:path sdm:uncertainty;
@@ -356,7 +356,7 @@ sdm:ArrivalShape rdf:type sh:NodeShape;
   sh:name "uncertainty";
   sh:datatype xsd:decimal
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:current_status;
   sh:description "Property. Describes the status of the vehicle w.r.t the stop corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]. SameAs:'current_status' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)";
   sh:name "current_status";
@@ -416,7 +416,7 @@ sdm:StopTimeUpdateShape sh:property [
   sh:description "Property. Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)";
   sh:name "vehicleDesc"
 ].
-sdm:VehicleDescShape rdf:type sh:NodeShape;
+sdmshape:VehicleDescShape rdf:type sh:NodeShape;
     sh:targetClass sdm:VehicleDesc;
     sh:property [
   sh:path sdm:vehicle_id;
@@ -434,7 +434,7 @@ sdm:VehicleDescShape rdf:type sh:NodeShape;
   sh:name "license_plate";
   sh:datatype xsd:string
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:route_long_name;
   sh:description "Property. Full name of a route. This name is more descriptive than the routeShortName and often includes the route's destination or stop. This mostly includes the to and from destination names of the route. SameAs: 'route_long_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)";
   sh:name "route_long_name";
@@ -454,7 +454,7 @@ sdm:StopTimeUpdateShape sh:property [
   sh:description "Property. A descriptor of realtime update on the schedule of a vehicle along a trip.";
   sh:name "tripDetails"
 ].
-sdm:TripDetailShape rdf:type sh:NodeShape;
+sdmshape:TripDetailShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TripDetail;
     sh:property [
   sh:path sdm:stop_headsign;
@@ -482,7 +482,7 @@ sdm:TripDetailShape rdf:type sh:NodeShape;
   sh:name "departure_time";
   sh:datatype xsd:time
 ].
-sdm:StopTimeUpdateShape sh:property [
+sdmshape:StopTimeUpdateShape sh:property [
   sh:path sdm:agency_name;
   sh:description "Property. The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)";
   sh:name "agency_name";
@@ -497,16 +497,16 @@ sdm:StopTimeUpdateShape sh:property [
   sh:description "Property. Describes the realtime position of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)";
   sh:name "vehicle_position"
 ].
-sdm:VehiclePositionShape rdf:type sh:NodeShape;
+sdmshape:VehiclePositionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:VehiclePosition;
     sh:property [
   sh:path sdm:position;
   sh:description "Property. Describes the current position of the vehicle corresponding to this observation. SameAs: 'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "position"
 ].
-sdm:PositionShape rdf:type sh:NodeShape;
+sdmshape:PositionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Position.
-sdm:VehiclePositionShape sh:property [
+sdmshape:VehiclePositionShape sh:property [
   sh:path sdm:current_status;
   sh:description "Property. Describes the status of the vehicle w.r.t the stop corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]. SameAs:'current_status' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "current_status";
@@ -521,7 +521,7 @@ sdm:VehiclePositionShape sh:property [
   sh:description "Property. Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).";
   sh:name "vehicleDesc"
 ].
-sdm:VehicleDescShape rdf:type sh:NodeShape;
+sdmshape:VehicleDescShape rdf:type sh:NodeShape;
     sh:targetClass sdm:VehicleDesc;
     sh:property [
   sh:path sdm:vehicle_id;
@@ -539,7 +539,7 @@ sdm:VehicleDescShape rdf:type sh:NodeShape;
   sh:name "license_plate";
   sh:datatype xsd:string
 ].
-sdm:VehiclePositionShape sh:property [
+sdmshape:VehiclePositionShape sh:property [
   sh:path sdm:stop_id;
   sh:description "Property. Stop ID/Stop name of the bus stops corresponding to the bus in this observation. SameAs: 'stop_id' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "stop_id";
@@ -554,7 +554,7 @@ sdm:VehiclePositionShape sh:property [
   sh:description "Property. Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).";
   sh:name "trip"
 ].
-sdm:TripShape rdf:type sh:NodeShape;
+sdmshape:TripShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Trip;
     sh:property [
   sh:path sdm:direction_id;
@@ -587,7 +587,7 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:name "trip_id";
   sh:datatype xsd:string
 ].
-sdm:VehiclePositionShape sh:property [
+sdmshape:VehiclePositionShape sh:property [
   sh:path sdm:license_plate;
   sh:description "Property. Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)";
   sh:name "license_plate";
@@ -662,7 +662,7 @@ sdm:VehiclePositionShape sh:property [
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'departure' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)";
   sh:name "departure"
 ].
-sdm:DepartureShape rdf:type sh:NodeShape;
+sdmshape:DepartureShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Departure;
     sh:property [
   sh:path sdm:uncertainty;
@@ -670,7 +670,7 @@ sdm:DepartureShape rdf:type sh:NodeShape;
   sh:name "uncertainty";
   sh:datatype xsd:decimal
 ].
-sdm:VehiclePositionShape sh:property [
+sdmshape:VehiclePositionShape sh:property [
   sh:path sdm:ac_available;
   sh:description "Property. Describes the presence of air conditioning option in the vehicle corresponding to this observation.";
   sh:name "ac_available";
@@ -704,7 +704,7 @@ sdm:VehiclePositionShape sh:property [
   sh:description "Property. Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)";
   sh:name "trip"
 ].
-sdm:TripShape rdf:type sh:NodeShape;
+sdmshape:TripShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Trip;
     sh:property [
   sh:path sdm:direction_id;
@@ -737,7 +737,7 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:name "trip_id";
   sh:datatype xsd:string
 ].
-sdm:VehiclePositionShape sh:property [
+sdmshape:VehiclePositionShape sh:property [
   sh:path sdm:last_stop_id;
   sh:description "Property. Stop ID/Stop name of the previous bus stop corresponding to the bus in this observation. SameAs: 'stop_id' field from GTFS Realtime message-VehiclePosition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)";
   sh:name "last_stop_id";
@@ -762,7 +762,7 @@ sdm:VehiclePositionShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text. Information about the device associated with the observations.";
   sh:name "deviceInfo"
 ].
-sdm:DeviceInfoShape rdf:type sh:NodeShape;
+sdmshape:DeviceInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DeviceInfo;
     sh:property [
   sh:path sdm:rfID;
@@ -799,7 +799,7 @@ sdm:DeviceInfoShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Text'. Describes the information of the device, sensor or system in consideration.";
   sh:name "deviceModel"
 ].
-sdm:DeviceModelShape rdf:type sh:NodeShape;
+sdmshape:DeviceModelShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DeviceModel;
     sh:property [
   sh:path sdm:brandName;
@@ -826,14 +826,14 @@ sdm:DeviceModelShape rdf:type sh:NodeShape;
   sh:description "Property. Describes the trip information like delay, departures, etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)";
   sh:name "trip_update"
 ].
-sdm:TripUpdateShape rdf:type sh:NodeShape;
+sdmshape:TripUpdateShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TripUpdate;
     sh:property [
   sh:path sdm:trip;
   sh:description "Property. Following the conventions of GTFS trip. Model:'https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor'. ";
   sh:name "trip"
 ].
-sdm:TripShape rdf:type sh:NodeShape;
+sdmshape:TripShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Trip;
     sh:property [
   sh:path sdm:trip_id;
@@ -860,7 +860,7 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:name "schedule_relationship";
   sh:in (sdm:SCHEDULED sdm:ADDED sdm:UNSCHEDULED sdm:CANCELED)
 ].
-sdm:TripUpdateShape sh:property [
+sdmshape:TripUpdateShape sh:property [
   sh:path sdm:observationDateTime;
   sh:description "Property. Last reported time of observation.";
   sh:name "observationDateTime";

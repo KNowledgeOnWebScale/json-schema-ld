@@ -75,7 +75,7 @@ sdm:socketType rdf:type rdf:Property;
     rdfs:domain <https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json>.
 sdm:SocketType rdf:type skos:ConceptScheme.
 sdm:socketType rdfs:range [
-  owl:oneOf (sdm:Caravan_Mains_Socket sdm:CHAdeMO <sdm:CCS/SAE> sdm:Dual_CHAdeMO sdm:Dual_J-1772 sdm:Dual_Mennekes sdm:J-1772 sdm:Mennekes sdm:Other sdm:Tesla sdm:Type2 sdm:Type3 sdm:Wall_Euro)
+  owl:oneOf (sdm:Caravan_Mains_Socket sdm:CHAdeMO sdm:CCS%2FSAE sdm:Dual_CHAdeMO sdm:Dual_J-1772 sdm:Dual_Mennekes sdm:J-1772 sdm:Mennekes sdm:Other sdm:Tesla sdm:Type2 sdm:Type3 sdm:Wall_Euro)
 ].
 sdm:Caravan_Mains_Socket rdf:type skos:Concept;
     skos:inScheme sdm:SocketType;
@@ -83,7 +83,7 @@ sdm:Caravan_Mains_Socket rdf:type skos:Concept;
 sdm:CHAdeMO rdf:type skos:Concept;
     skos:inScheme sdm:SocketType;
     rdfs:label "CHAdeMO".
-<sdm:CCS/SAE> rdf:type skos:Concept;
+sdm:CCS%2FSAE rdf:type skos:Concept;
     skos:inScheme sdm:SocketType;
     rdfs:label "CCS/SAE".
 sdm:Dual_CHAdeMO rdf:type skos:Concept;

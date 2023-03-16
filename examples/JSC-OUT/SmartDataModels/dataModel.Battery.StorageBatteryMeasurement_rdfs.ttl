@@ -148,12 +148,12 @@ sdm:inverterStatus rdf:type rdf:Property;
     rdfs:domain <https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json>.
 sdm:InverterStatus rdf:type skos:ConceptScheme.
 sdm:inverterStatus rdfs:range [
-  owl:oneOf (sdm:00-OnSector <sdm:01-PowerFailure/OnBattery> sdm:02-LossCommunication sdm:03-BatteryFault sdm:04-SystemShutDown sdm:05-TensionDip sdm:06-OverVoltage sdm:07-VoltageDrop sdm:08-VoltageIncrease sdm:09-LineNoise sdm:10-FrequencyVariation sdm:11-TransientDistortion sdm:12-HarmonicDistortion)
+  owl:oneOf (sdm:00-OnSector sdm:01-PowerFailure%2FOnBattery sdm:02-LossCommunication sdm:03-BatteryFault sdm:04-SystemShutDown sdm:05-TensionDip sdm:06-OverVoltage sdm:07-VoltageDrop sdm:08-VoltageIncrease sdm:09-LineNoise sdm:10-FrequencyVariation sdm:11-TransientDistortion sdm:12-HarmonicDistortion)
 ].
 sdm:00-OnSector rdf:type skos:Concept;
     skos:inScheme sdm:InverterStatus;
     rdfs:label "00-OnSector".
-<sdm:01-PowerFailure/OnBattery> rdf:type skos:Concept;
+sdm:01-PowerFailure%2FOnBattery rdf:type skos:Concept;
     skos:inScheme sdm:InverterStatus;
     rdfs:label "01-PowerFailure/OnBattery".
 sdm:02-LossCommunication rdf:type skos:Concept;

@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be StorageBatteryMeasurement";
   sh:name "type";
@@ -132,5 +132,5 @@ sdm:schema.jsonShape sh:property [
 ], [
   sh:path sdm:inverterStatus;
   sh:name "inverterStatus";
-  sh:in (sdm:00-OnSector <sdm:01-PowerFailure/OnBattery> sdm:02-LossCommunication sdm:03-BatteryFault sdm:04-SystemShutDown sdm:05-TensionDip sdm:06-OverVoltage sdm:07-VoltageDrop sdm:08-VoltageIncrease sdm:09-LineNoise sdm:10-FrequencyVariation sdm:11-TransientDistortion sdm:12-HarmonicDistortion)
+  sh:in (sdm:00-OnSector sdm:01-PowerFailure%2FOnBattery sdm:02-LossCommunication sdm:03-BatteryFault sdm:04-SystemShutDown sdm:05-TensionDip sdm:06-OverVoltage sdm:07-VoltageDrop sdm:08-VoltageIncrease sdm:09-LineNoise sdm:10-FrequencyVariation sdm:11-TransientDistortion sdm:12-HarmonicDistortion)
 ].

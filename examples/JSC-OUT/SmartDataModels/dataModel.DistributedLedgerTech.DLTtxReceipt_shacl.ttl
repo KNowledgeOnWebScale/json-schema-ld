@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxReceipt/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NSGI Entity Type. it has to be DLTtxReceipt";
   sh:name "type";
@@ -37,7 +37,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Transaction Receipt";
   sh:name "TxReceipts"
 ].
-sdm:TxReceiptShape rdf:type sh:NodeShape;
+sdmshape:TxReceiptShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TxReceipt;
     sh:property [
   sh:path sdm:to;
@@ -58,7 +58,7 @@ sdm:TxReceiptShape rdf:type sh:NodeShape;
   sh:description "Property. A log record can be used to describe an event within a smart contract (Ethereum)";
   sh:name "logs"
 ].
-sdm:LogShape rdf:type sh:NodeShape;
+sdmshape:LogShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Log;
     sh:property [
   sh:path sdm:id;

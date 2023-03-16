@@ -84,7 +84,7 @@ sdm:fuelType dcterms:description "Property. The fuel type powering the UAVModel.
     rdfs:domain <https://smart-data-models.github.io/dataModel.UnmannedAerialVehicleModel/UnmannedAerialVehicleModel/schema.json>.
 sdm:FuelType rdf:type skos:ConceptScheme.
 sdm:fuelType rdfs:range [
-  owl:oneOf (sdm:biodiesel sdm:cng sdm:diesel sdm:electric sdm:ethanol sdm:gasoline <sdm:hybrid electric/petrol> <sdm:hybrid electric/diesel> sdm:hydrogen sdm:lpgAutogas sdm:other sdm:petrol sdm:petrol(unleaded) sdm:petrol(leaded))
+  owl:oneOf (sdm:biodiesel sdm:cng sdm:diesel sdm:electric sdm:ethanol sdm:gasoline sdm:hybrid%20electric%2Fpetrol sdm:hybrid%20electric%2Fdiesel sdm:hydrogen sdm:lpgAutogas sdm:other sdm:petrol sdm:petrol(unleaded) sdm:petrol(leaded))
 ].
 sdm:biodiesel rdf:type skos:Concept;
     skos:inScheme sdm:FuelType;
@@ -104,10 +104,10 @@ sdm:ethanol rdf:type skos:Concept;
 sdm:gasoline rdf:type skos:Concept;
     skos:inScheme sdm:FuelType;
     rdfs:label "gasoline".
-<sdm:hybrid electric/petrol> rdf:type skos:Concept;
+sdm:hybrid%20electric%2Fpetrol rdf:type skos:Concept;
     skos:inScheme sdm:FuelType;
     rdfs:label "hybrid electric/petrol".
-<sdm:hybrid electric/diesel> rdf:type skos:Concept;
+sdm:hybrid%20electric%2Fdiesel rdf:type skos:Concept;
     skos:inScheme sdm:FuelType;
     rdfs:label "hybrid electric/diesel".
 sdm:hydrogen rdf:type skos:Concept;

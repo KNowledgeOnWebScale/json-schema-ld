@@ -37,7 +37,7 @@ sdm:eventType rdf:type rdf:Property;
     rdfs:domain <https://smart-data-models.github.io/dataModel.CPSV-AP/LifeEvent/schema.json>.
 sdm:EventType rdf:type skos:ConceptScheme.
 sdm:eventType rdfs:range [
-  owl:oneOf (sdm:Having a child sdm:Becoming a (social) caretaker sdm:Starting education sdm:Looking for a new job <sdm:Losing/quitting a job> sdm:Looking for a place to live sdm:Changing relationship status sdm:Driving a vehicle sdm:Travelling abroad <sdm:Moving to/from the country> sdm:Going into military service <sdm:Facing an emergency / health problem> sdm:Facing a crime sdm:Retirement sdm:Death of a relative)
+  owl:oneOf (sdm:Having a child sdm:Becoming a (social) caretaker sdm:Starting education sdm:Looking for a new job sdm:Losing%2Fquitting%20a%20job sdm:Looking for a place to live sdm:Changing relationship status sdm:Driving a vehicle sdm:Travelling abroad sdm:Moving%20to%2Ffrom%20the%20country sdm:Going into military service sdm:Facing%20an%20emergency%20%2F%20health%20problem sdm:Facing a crime sdm:Retirement sdm:Death of a relative)
 ].
 sdm:Having a child rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
@@ -51,7 +51,7 @@ sdm:Starting education rdf:type skos:Concept;
 sdm:Looking for a new job rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
     rdfs:label "Looking for a new job".
-<sdm:Losing/quitting a job> rdf:type skos:Concept;
+sdm:Losing%2Fquitting%20a%20job rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
     rdfs:label "Losing/quitting a job".
 sdm:Looking for a place to live rdf:type skos:Concept;
@@ -66,13 +66,13 @@ sdm:Driving a vehicle rdf:type skos:Concept;
 sdm:Travelling abroad rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
     rdfs:label "Travelling abroad".
-<sdm:Moving to/from the country> rdf:type skos:Concept;
+sdm:Moving%20to%2Ffrom%20the%20country rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
     rdfs:label "Moving to/from the country".
 sdm:Going into military service rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
     rdfs:label "Going into military service".
-<sdm:Facing an emergency / health problem> rdf:type skos:Concept;
+sdm:Facing%20an%20emergency%20%2F%20health%20problem rdf:type skos:Concept;
     skos:inScheme sdm:EventType;
     rdfs:label "Facing an emergency / health problem".
 sdm:Facing a crime rdf:type skos:Concept;

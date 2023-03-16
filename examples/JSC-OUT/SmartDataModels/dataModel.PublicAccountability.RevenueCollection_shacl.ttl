@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.PublicAccountability/RevenueCollection/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be RevenueCollection";
   sh:name "type";
@@ -75,7 +75,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"
 ].
-sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
+sdmshape:MunicipalityInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MunicipalityInfo;
     sh:property [
   sh:path sdm:district;

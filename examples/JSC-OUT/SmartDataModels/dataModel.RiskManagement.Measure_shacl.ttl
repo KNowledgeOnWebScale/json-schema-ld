@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Measure/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It must be equal to Measure.";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Actions to be taken related to a risk";
   sh:name "action"
 ].
-sdm:ActionShape rdf:type sh:NodeShape;
+sdmshape:ActionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Action;
     sh:property [
   sh:path sdm:id;

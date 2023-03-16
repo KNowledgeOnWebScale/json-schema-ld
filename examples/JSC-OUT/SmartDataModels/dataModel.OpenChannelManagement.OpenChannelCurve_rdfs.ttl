@@ -33,21 +33,21 @@ sdm:curveType dcterms:description "Property. Type of curve for spillways and reg
     rdfs:domain <https://smart-data-models.github.io/data-models.OpenChannelManagement/OpenChannelCurve/schema.json>.
 sdm:CurveType rdf:type skos:ConceptScheme.
 sdm:curveType rdfs:range [
-  owl:oneOf (<sdm:a/H-C> sdm:H-Q <sdm:Co-P/Ho> <sdm:C-H/L> <sdm:C/Co-H/Ho>)
+  owl:oneOf (sdm:a%2FH-C sdm:H-Q sdm:Co-P%2FHo sdm:C-H%2FL sdm:C%2FCo-H%2FHo)
 ].
-<sdm:a/H-C> rdf:type skos:Concept;
+sdm:a%2FH-C rdf:type skos:Concept;
     skos:inScheme sdm:CurveType;
     rdfs:label "a/H-C".
 sdm:H-Q rdf:type skos:Concept;
     skos:inScheme sdm:CurveType;
     rdfs:label "H-Q".
-<sdm:Co-P/Ho> rdf:type skos:Concept;
+sdm:Co-P%2FHo rdf:type skos:Concept;
     skos:inScheme sdm:CurveType;
     rdfs:label "Co-P/Ho".
-<sdm:C-H/L> rdf:type skos:Concept;
+sdm:C-H%2FL rdf:type skos:Concept;
     skos:inScheme sdm:CurveType;
     rdfs:label "C-H/L".
-<sdm:C/Co-H/Ho> rdf:type skos:Concept;
+sdm:C%2FCo-H%2FHo rdf:type skos:Concept;
     skos:inScheme sdm:CurveType;
     rdfs:label "C/Co-H/Ho".
 sdm:xData rdf:type rdf:Property;

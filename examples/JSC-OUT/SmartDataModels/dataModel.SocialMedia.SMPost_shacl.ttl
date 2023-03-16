@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMPost/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It must be equal to SMPost.";
   sh:name "type";
@@ -129,7 +129,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. The different interactions of this post.";
   sh:name "hasInteractionCount"
 ].
-sdm:HasInteractionCountShape rdf:type sh:NodeShape;
+sdmshape:HasInteractionCountShape rdf:type sh:NodeShape;
     sh:targetClass sdm:HasInteractionCount;
     sh:property [
   sh:path sdm:interactionType;
@@ -140,7 +140,7 @@ sdm:HasInteractionCountShape rdf:type sh:NodeShape;
   sh:name "count";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:belongsToCollection;
   sh:or ([
   sh:minLength 1;

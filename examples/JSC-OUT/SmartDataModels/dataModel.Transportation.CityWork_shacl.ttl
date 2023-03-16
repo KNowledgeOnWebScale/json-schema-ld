@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be CityWork";
   sh:name "type";
@@ -116,7 +116,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Specific rules taken for the works. A structured value from 0 to N occurrences where each items has the following format : `Disposition`: with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`. Enum:'alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'";
   sh:name "workDisposition"
 ].
-sdm:WorkDispositionShape rdf:type sh:NodeShape;
+sdmshape:WorkDispositionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:WorkDisposition;
     sh:property [
   sh:path sdm:disposition;
@@ -157,7 +157,7 @@ sdm:WorkDispositionShape rdf:type sh:NodeShape;
   sh:description "Property. Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties 'startDate, endDate, dayOfWeek, comment'";
   sh:name "derogation"
 ].
-sdm:DerogationShape rdf:type sh:NodeShape;
+sdmshape:DerogationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Derogation;
     sh:property [
   sh:path sdm:derogationType;
@@ -194,7 +194,7 @@ sdm:DerogationShape rdf:type sh:NodeShape;
   sh:description "Property. Roads impacted by the works and the details of the roads concerned by the work. A structured value from 0 to N occurrences where each items is a string in the format : 'roadImpact':[List of Segment Impacted or Free Text or geo-property, separated by a comma]. If `isMainRoadImpactedHTR` = true, The first item is this one.";
   sh:name "roadImpacted"
 ].
-sdm:RoadImpactedShape rdf:type sh:NodeShape;
+sdmshape:RoadImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:RoadImpacted;
     sh:property [
   sh:path sdm:roadName;
@@ -222,7 +222,7 @@ sdm:RoadImpactedShape rdf:type sh:NodeShape;
   sh:description "Property. Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'roadId / roadName / roadLocation'. Second subproperties, 'maxTonnage'";
   sh:name "maxAuthorizedTonnage"
 ].
-sdm:MaxAuthorizedTonnageShape rdf:type sh:NodeShape;
+sdmshape:MaxAuthorizedTonnageShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MaxAuthorizedTonnage;
     sh:property [
   sh:path sdm:roadImpacted;
@@ -239,7 +239,7 @@ sdm:MaxAuthorizedTonnageShape rdf:type sh:NodeShape;
   sh:name "roadName";
   sh:datatype xsd:string
 ].
-sdm:RoadImpactedShape sh:property [
+sdmshape:RoadImpactedShape sh:property [
   sh:path sdm:countOfBusLineImpacted;
   sh:description "Property. Count of Bus Lines impacted by the works. Model:'https://schema.org/Number'";
   sh:name "countOfBusLineImpacted";
@@ -249,7 +249,7 @@ sdm:RoadImpactedShape sh:property [
   sh:description "Property. Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'";
   sh:name "busImpacted"
 ].
-sdm:BusImpactedShape rdf:type sh:NodeShape;
+sdmshape:BusImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:BusImpacted;
     sh:property [
   sh:path sdm:lineName;
@@ -269,7 +269,7 @@ sdm:BusImpactedShape rdf:type sh:NodeShape;
   sh:description "Property. Scholl Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'";
   sh:name "schoolBusImpacted"
 ].
-sdm:SchoolBusImpactedShape rdf:type sh:NodeShape;
+sdmshape:SchoolBusImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:SchoolBusImpacted;
     sh:property [
   sh:path sdm:lineName;
@@ -289,7 +289,7 @@ sdm:SchoolBusImpactedShape rdf:type sh:NodeShape;
   sh:description "Property. Tramway Line impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'";
   sh:name "tramwayImpacted"
 ].
-sdm:TramwayImpactedShape rdf:type sh:NodeShape;
+sdmshape:TramwayImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TramwayImpacted;
     sh:property [
   sh:path sdm:lineName;
@@ -310,7 +310,7 @@ sdm:TramwayImpactedShape rdf:type sh:NodeShape;
   sh:description "Property. Subway lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'";
   sh:name "subwayImpacted"
 ].
-sdm:SubwayImpactedShape rdf:type sh:NodeShape;
+sdmshape:SubwayImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:SubwayImpacted;
     sh:property [
   sh:path sdm:lineName;
@@ -330,7 +330,7 @@ sdm:SubwayImpactedShape rdf:type sh:NodeShape;
   sh:description "Property. Rail lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'";
   sh:name "railwayImpacted"
 ].
-sdm:RailwayImpactedShape rdf:type sh:NodeShape;
+sdmshape:RailwayImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:RailwayImpacted;
     sh:property [
   sh:path sdm:lineName;
@@ -359,7 +359,7 @@ sdm:RailwayImpactedShape rdf:type sh:NodeShape;
   sh:description "Property. Station Impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, 'stationType'. Second subproperties, one of 'stationId / stationName / stationLocation'";
   sh:name "stationImpacted"
 ].
-sdm:StationImpactedShape rdf:type sh:NodeShape;
+sdmshape:StationImpactedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:StationImpacted;
     sh:property [
   sh:path sdm:stationType;

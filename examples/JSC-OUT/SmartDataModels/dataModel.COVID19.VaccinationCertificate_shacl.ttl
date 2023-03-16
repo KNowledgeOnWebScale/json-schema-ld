@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/datamodel.COVID19/VaccinationCertificate/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NSGI Entity Type. it has to be VaccinationCertificate";
   sh:name "type";
@@ -47,7 +47,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Vaccine, Vaccine Event and recipient object";
   sh:name "credentialSubject"
 ].
-sdm:CredentialSubjectShape rdf:type sh:NodeShape;
+sdmshape:CredentialSubjectShape rdf:type sh:NodeShape;
     sh:targetClass sdm:CredentialSubject;
     sh:property [
   sh:path sdm:batchNumber;
@@ -74,7 +74,7 @@ sdm:CredentialSubjectShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Patient'. The recipient of the vaccine";
   sh:name "recipient"
 ].
-sdm:RecipientShape rdf:type sh:NodeShape;
+sdmshape:RecipientShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Recipient;
     sh:property [
   sh:path sdm:givenName;
@@ -97,12 +97,12 @@ sdm:RecipientShape rdf:type sh:NodeShape;
   sh:name "birthDate";
   sh:datatype xsd:date
 ].
-sdm:CredentialSubjectShape sh:property [
+sdmshape:CredentialSubjectShape sh:property [
   sh:path sdm:vaccine;
   sh:description "Property. Generic description of the vaccine/prophylaxis or its component(s)";
   sh:name "vaccine"
 ].
-sdm:VaccineShape rdf:type sh:NodeShape;
+sdmshape:VaccineShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Vaccine;
     sh:property [
   sh:path sdm:disease;
@@ -125,12 +125,12 @@ sdm:VaccineShape rdf:type sh:NodeShape;
   sh:name "marketingAuthorizationHolder";
   sh:datatype xsd:string
 ].
-sdm:CredentialSubjectShape sh:property [
+sdmshape:CredentialSubjectShape sh:property [
   sh:path sdm:proof;
   sh:description "Property. Proof of Immunization";
   sh:name "proof"
 ].
-sdm:ProofShape rdf:type sh:NodeShape;
+sdmshape:ProofShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Proof;
     sh:property [
   sh:path sdm:created;

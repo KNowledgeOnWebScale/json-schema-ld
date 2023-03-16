@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be EVChargingStation";
   sh:name "type";
@@ -47,7 +47,7 @@ sdm:schema.jsonShape sh:property [
 ], [
   sh:path sdm:socketType;
   sh:name "socketType";
-  sh:in (sdm:Caravan_Mains_Socket sdm:CHAdeMO <sdm:CCS/SAE> sdm:Dual_CHAdeMO sdm:Dual_J-1772 sdm:Dual_Mennekes sdm:J-1772 sdm:Mennekes sdm:Other sdm:Tesla sdm:Type2 sdm:Type3 sdm:Wall_Euro)
+  sh:in (sdm:Caravan_Mains_Socket sdm:CHAdeMO sdm:CCS%2FSAE sdm:Dual_CHAdeMO sdm:Dual_J-1772 sdm:Dual_Mennekes sdm:J-1772 sdm:Mennekes sdm:Other sdm:Tesla sdm:Type2 sdm:Type3 sdm:Wall_Euro)
 ], [
   sh:path sdm:openingHours;
   sh:description "Property. Opening hours of the charging station. Model:'http://schema.org/openingHours'. ";

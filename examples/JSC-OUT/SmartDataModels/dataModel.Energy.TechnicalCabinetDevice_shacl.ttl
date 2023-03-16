@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-models.Energy/TechnicalCabinetDevice/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be TechnicalCabinetDevice";
   sh:name "type";
@@ -120,7 +120,7 @@ sdm:schema.jsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-sdm:DimensionShape rdf:type sh:NodeShape;
+sdmshape:DimensionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Dimension;
     sh:property [
   sh:path sdm:height;
@@ -140,7 +140,7 @@ sdm:DimensionShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:weight;
   sh:description "Property. Weight of the item. The unit code (text) of measurement  is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KGM** represents Kilograms. Model:'https://schema.org/weigth'";
   sh:name "weight";
@@ -151,7 +151,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Internal dimension corresponding to the place to work inside the technical cabinet. The format is structured by a sub-property of 3 items. The unit code (text) of measurement  is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CMT** represents Centimeter. Model:'https://schema.org/StructuredValue'";
   sh:name "internalDimension"
 ].
-sdm:InternalDimensionShape rdf:type sh:NodeShape;
+sdmshape:InternalDimensionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:InternalDimension;
     sh:property [
   sh:path sdm:height;
@@ -169,7 +169,7 @@ sdm:InternalDimensionShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:protectionIP;
   sh:description "Property. IP 'Ingress Protection' for the Junction Box. This is the level classifies and rates the degree of protection provided by mechanical casings and electrical enclosures against intrusion, dust, accidental contact, and water according to International Electrotechnical Commission standard (EN 60-529). First digit: Solid particle protection (Single numeral: 06 or 'X'). Second digit: Liquid ingress protection (Single numeral: 09 or 'X' ).Third digit: Personal Protection against access to dangerous parts (optional additional letter). Fourth digit: Other protections (optional additional letter)";
   sh:name "protectionIP";
@@ -190,7 +190,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Ambient operating temperature range. This is the minimum and maximum resistance to cold and heat. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.";
   sh:name "operatingTemperature"
 ].
-sdm:OperatingTemperatureShape rdf:type sh:NodeShape;
+sdmshape:OperatingTemperatureShape rdf:type sh:NodeShape;
     sh:targetClass sdm:OperatingTemperature;
     sh:property [
   sh:path sdm:min;
@@ -203,7 +203,7 @@ sdm:OperatingTemperatureShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:protectionOthers;
   sh:name "protectionOthers";
   sh:in (sdm:abrasion sdm:basement sdm:dampProof sdm:display sdm:doorTearing sdm:dust sdm:forcedOpening sdm:graffiti sdm:insect sdm:other sdm:roofOverload sdm:saltSpray sdm:shielding sdm:solar sdm:vandalism sdm:water)

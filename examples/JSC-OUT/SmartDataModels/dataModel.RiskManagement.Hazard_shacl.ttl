@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Hazard/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It must be equal to Hazard.";
   sh:name "type";
@@ -35,7 +35,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Array of objects that describes the Hazard Map and contains its ids, values and colors.";
   sh:name "contentInformation"
 ].
-sdm:ContentInformationShape rdf:type sh:NodeShape;
+sdmshape:ContentInformationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ContentInformation;
     sh:property [
   sh:path sdm:id;
@@ -52,7 +52,7 @@ sdm:ContentInformationShape rdf:type sh:NodeShape;
   sh:name "color";
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:isAffectedByEO;
   sh:or ([
   sh:minLength 1;

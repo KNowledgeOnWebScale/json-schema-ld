@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-models.Energy/PhotovoltaicMeasurement/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be PhotovoltaicMeasurement";
   sh:name "type";
@@ -93,5 +93,5 @@ sdm:schema.jsonShape sh:property [
 ], [
   sh:path sdm:inverterStatus;
   sh:name "inverterStatus";
-  sh:in (sdm:00-On sector <sdm:01-Power failure / On battery> sdm:02-Loss of communication sdm:03-Battery fault sdm:04-System shutdown sdm:05-Tension dip sdm:06-Overvoltage sdm:07-Voltage drop sdm:08-Voltage increase sdm:09-Line noise sdm:10-Frequency variation sdm:11-Transient distortion sdm:12-Harmonic distortion)
+  sh:in (sdm:00-On sector sdm:01-Power%20failure%20%2F%20On%20battery sdm:02-Loss of communication sdm:03-Battery fault sdm:04-System shutdown sdm:05-Tension dip sdm:06-Overvoltage sdm:07-Voltage drop sdm:08-Voltage increase sdm:09-Line noise sdm:10-Frequency variation sdm:11-Transient distortion sdm:12-Harmonic distortion)
 ].

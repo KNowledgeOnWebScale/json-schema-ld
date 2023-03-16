@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.FrictionlessData/DataResourceFrictionlessData/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be DataResourceFrictionlessData";
   sh:name "type";
@@ -41,9 +41,9 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Schema. A schema for this resource";
   sh:name "schema"
 ].
-sdm:SchemaShape rdf:type sh:NodeShape;
+sdmshape:SchemaShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Schema.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:title;
   sh:description "Property. Title. A human-readable title";
   sh:name "title";
@@ -63,7 +63,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Sources. . The raw sources for this resource";
   sh:name "sources"
 ].
-sdm:SourceShape rdf:type sh:NodeShape;
+sdmshape:SourceShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Source;
     sh:property [
   sh:path sdm:title;
@@ -78,12 +78,12 @@ sdm:SourceShape rdf:type sh:NodeShape;
   sh:name "email";
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:licenses;
   sh:description "Property. Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published";
   sh:name "licenses"
 ].
-sdm:LicenseShape rdf:type sh:NodeShape;
+sdmshape:LicenseShape rdf:type sh:NodeShape;
     sh:targetClass sdm:License;
     sh:property [
   sh:path sdm:name;
@@ -100,7 +100,7 @@ sdm:LicenseShape rdf:type sh:NodeShape;
   sh:name "title";
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:format;
   sh:description "Property. Format. 'csv', 'xls', 'json' are examples of common formats. The file format of this resource";
   sh:name "format";

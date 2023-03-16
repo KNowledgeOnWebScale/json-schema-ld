@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/CrossSector/Camera/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be Camera";
   sh:name "type";
@@ -39,7 +39,7 @@ sdm:schema.jsonShape sh:property [
   sh:path sdm:cameraType;
   sh:description "Property. Model:'https://schema.org/Text'. Type of the camera corresponding to this observation. Enum:'FIXED, PTZ, DOME, DAY/NIGHT, C-MOUNT, BULLET'.";
   sh:name "cameraType";
-  sh:in (sdm:FIXED sdm:PTZ sdm:DOME <sdm:DAY/NIGHT> sdm:C-MOUNT sdm:BULLET)
+  sh:in (sdm:FIXED sdm:PTZ sdm:DOME sdm:DAY%2FNIGHT sdm:C-MOUNT sdm:BULLET)
 ], [
   sh:path sdm:endDateTime;
   sh:description "Property. Model:'https://schema.org/DateTime'. Reported end time corresponding to this observation.";
@@ -50,7 +50,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Orientation information for the camera corresponding to this observation";
   sh:name "cameraOrientation"
 ].
-sdm:CameraOrientationShape rdf:type sh:NodeShape;
+sdmshape:CameraOrientationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:CameraOrientation;
     sh:property [
   sh:path sdm:comments;
@@ -61,7 +61,7 @@ sdm:CameraOrientationShape rdf:type sh:NodeShape;
   sh:name "annotatedMap";
   sh:datatype xsd:anyURI
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:cameraNum;
   sh:description "Property. Model:'https://schema.org/Number'. Camera number corresponding to this observation.";
   sh:name "cameraNum";

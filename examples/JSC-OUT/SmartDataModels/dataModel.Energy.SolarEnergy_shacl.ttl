@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Energy/SolarEnergy/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be SolarEnergy";
   sh:name "type";
@@ -30,7 +30,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Current per phase. Ordered triple comprising of active power from three phases in the following order: [R Y B]";
   sh:name "phaseCurrent"
 ].
-sdm:PhaseCurrentShape rdf:type sh:NodeShape;
+sdmshape:PhaseCurrentShape rdf:type sh:NodeShape;
     sh:targetClass sdm:PhaseCurrent;
     sh:property [
   sh:path sdm:L1;
@@ -45,12 +45,12 @@ sdm:PhaseCurrentShape rdf:type sh:NodeShape;
   sh:name "L3";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:reactivePower;
   sh:description "Property. Model:'http://schema.org/StructuredValue'. Units:'volts-ampere-reactive (VAr)'. Fundamental frequency reactive power. The actual values will be conveyed by subproperties whose names will be equal to the name of each of the alternating current phases: L1, L2, L3.";
   sh:name "reactivePower"
 ].
-sdm:ReactivePowerShape rdf:type sh:NodeShape;
+sdmshape:ReactivePowerShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ReactivePower;
     sh:property [
   sh:path sdm:L1;
@@ -65,7 +65,7 @@ sdm:ReactivePowerShape rdf:type sh:NodeShape;
   sh:name "L3";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:voltage;
   sh:description "Property. The value of Voltage in the entity corresponding to this observation.";
   sh:name "voltage";
@@ -75,7 +75,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'http://schema.org/StructuredValue'. Units:'-1 to +1'. Power factor for each phase. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3";
   sh:name "powerFactor"
 ].
-sdm:PowerFactorShape rdf:type sh:NodeShape;
+sdmshape:PowerFactorShape rdf:type sh:NodeShape;
     sh:targetClass sdm:PowerFactor;
     sh:property [
   sh:path sdm:L1;
@@ -96,12 +96,12 @@ sdm:PowerFactorShape rdf:type sh:NodeShape;
   sh:maxInclusive 1;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:current;
   sh:description "Property. Model:'http://schema.org/StructuredValue'. Units:'Ampers (A)'. Electrical current. The actual values will be conveyed by one subproperty per alternating current phase and the neutral wire: L1, L2, L3 and N.";
   sh:name "current"
 ].
-sdm:CurrentShape rdf:type sh:NodeShape;
+sdmshape:CurrentShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Current;
     sh:property [
   sh:path sdm:L1;
@@ -120,7 +120,7 @@ sdm:CurrentShape rdf:type sh:NodeShape;
   sh:name "N";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:totalReactivePower;
   sh:description "Property. Total reactive power for all phases.";
   sh:name "totalReactivePower";
@@ -130,7 +130,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'http://schema.org/StructuredValue'. Units:'Volts (V)'. The voltage between each phase and neutral conductor. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3";
   sh:name "phaseVoltage"
 ].
-sdm:PhaseVoltageShape rdf:type sh:NodeShape;
+sdmshape:PhaseVoltageShape rdf:type sh:NodeShape;
     sh:targetClass sdm:PhaseVoltage;
     sh:property [
   sh:path sdm:L1;
@@ -148,12 +148,12 @@ sdm:PhaseVoltageShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:activePower;
   sh:description "Property. Model:'http://schema.org/StructuredValue'. Units:'watt (W)'.Active power consumed per phase. The actual values will beconveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3. ";
   sh:name "activePower"
 ].
-sdm:ActivePowerShape rdf:type sh:NodeShape;
+sdmshape:ActivePowerShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ActivePower;
     sh:property [
   sh:path sdm:L1;
@@ -168,7 +168,7 @@ sdm:ActivePowerShape rdf:type sh:NodeShape;
   sh:name "L3";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:dataDescriptor;
   sh:description "Relationship. URI pointing to the data-descriptor entity";
   sh:name "dataDescriptor";

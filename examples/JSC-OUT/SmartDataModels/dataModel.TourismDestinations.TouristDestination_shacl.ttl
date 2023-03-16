@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.TourismDestinations/TouristDestination/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It has to be TouristDestination. Model:'https://schema.org/TouristDestination'";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:''. ";
   sh:name "includesAttraction"
 ].
-sdm:IncludesAttractionShape rdf:type sh:NodeShape;
+sdmshape:IncludesAttractionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:IncludesAttraction;
     sh:property [
   sh:path sdm:type;

@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.ManufacturingMachine/ManufacturingMachine/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be ManufacturingMachine.";
   sh:name "type";
@@ -154,7 +154,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text'. Notes relating to this machine installation.";
   sh:name "installationNotes"
 ].
-sdm:InstallationNoteShape rdf:type sh:NodeShape;
+sdmshape:InstallationNoteShape rdf:type sh:NodeShape;
     sh:targetClass sdm:InstallationNote;
     sh:property [
   sh:path sdm:docUri;
@@ -165,7 +165,7 @@ sdm:InstallationNoteShape rdf:type sh:NodeShape;
   sh:name "value";
   sh:datatype xsd:string
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:voltage;
   sh:description "Property. Model:'https://schema.org/Number'. The nominal required supply voltage, in volts. Units:'Volts";
   sh:name "voltage";

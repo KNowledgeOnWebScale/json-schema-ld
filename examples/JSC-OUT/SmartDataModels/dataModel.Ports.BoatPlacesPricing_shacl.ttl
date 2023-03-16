@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Ports/BoatPlacePricing/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be BoatPlacePricing";
   sh:name "type";
@@ -99,7 +99,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/StructuredValue'. Ticket price of the place for passing boats for this category / period. A structured value with 3 subproperties where each items is a string in the format `key` : `price` in Euro €";
   sh:name "passage"
 ].
-sdm:PassageShape rdf:type sh:NodeShape;
+sdmshape:PassageShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Passage;
     sh:property [
   sh:path sdm:day;
@@ -114,12 +114,12 @@ sdm:PassageShape rdf:type sh:NodeShape;
   sh:name "month";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:resident;
   sh:description "Property. Model:'https://schema.org/StructuredValue'. Ticket price of the place for resident boats for this category / period. A structured value with 2 subproperties where each items is a string in the format `key` : `price` in Euro €";
   sh:name "resident"
 ].
-sdm:ResidentShape rdf:type sh:NodeShape;
+sdmshape:ResidentShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Resident;
     sh:property [
   sh:path sdm:month;
@@ -130,12 +130,12 @@ sdm:ResidentShape rdf:type sh:NodeShape;
   sh:name "annual";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:wintering;
   sh:description "Property. Model:'https://schema.org/StructuredValue'. Ticket price of the place for wintering boats for this category / period. A structured value with 3 subproperties where each items is a string in the format `key` : `price` in Euro €";
   sh:name "wintering"
 ].
-sdm:WinteringShape rdf:type sh:NodeShape;
+sdmshape:WinteringShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Wintering;
     sh:property [
   sh:path sdm:day;
@@ -150,12 +150,12 @@ sdm:WinteringShape rdf:type sh:NodeShape;
   sh:name "month";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:fairing;
   sh:description "Property. Model:'https://schema.org/StructuredValue'. Ticket price of the place for fairing boats for this category / period. A structured value with 3 subproperties where each items is a string in the format `key` : `price` in Euro €";
   sh:name "fairing"
 ].
-sdm:FairingShape rdf:type sh:NodeShape;
+sdmshape:FairingShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Fairing;
     sh:property [
   sh:path sdm:day;

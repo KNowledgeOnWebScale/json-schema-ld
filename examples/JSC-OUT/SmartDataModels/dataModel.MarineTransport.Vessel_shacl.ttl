@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.MarineTransport/master/Vessel/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:id;
   sh:description "Property. Unique identifier of the entity";
   sh:name "id";
@@ -32,7 +32,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygoProperty.";
   sh:name "location"
 ].
-sdm:LocationShape rdf:type sh:NodeShape;
+sdmshape:LocationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Location;
     sh:property [
   sh:path sdm:type;

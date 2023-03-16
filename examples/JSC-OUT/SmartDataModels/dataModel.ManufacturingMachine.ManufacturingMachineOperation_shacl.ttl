@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.ManufacturingMachine/ManufacturingMachineOperation/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity identifier. It has to be ManufacturingMachineOperation";
   sh:name "type";
@@ -87,7 +87,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. A custom property describing the output data of the operation. The properties of the schema of the output highly depends the machine model.";
   sh:name "operationOutput"
 ].
-sdm:OperationOutputShape rdf:type sh:NodeShape;
+sdmshape:OperationOutputShape rdf:type sh:NodeShape;
     sh:targetClass sdm:OperationOutput;
     sh:property [
   sh:path sdm:unitsPrinted;

@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/smart-data-models/dataModel.OSLO/raw/master/ResourceReport/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be ResourceReport.";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#actuator'. Engine of the means of transport.";
   sh:name "ResourceReport.actuator"
 ].
-sdm:ResourceReport.actuatorShape rdf:type sh:NodeShape;
+sdmshape:ResourceReport.actuatorShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ResourceReport.actuator;
     sh:property [
   sh:path sdm:type;
@@ -41,12 +41,12 @@ sdm:ResourceReport.actuatorShape rdf:type sh:NodeShape;
   sh:minCount 1;
   sh:maxCount 1
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.location;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#location'. Location of the Resource. This could be a bike parking station or the real-time location of the vehicle, e.g. in free-floating part transport.";
   sh:name "ResourceReport.location"
 ].
-sdm:ResourceReport.locationShape rdf:type sh:NodeShape;
+sdmshape:ResourceReport.locationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ResourceReport.location;
     sh:property [
   sh:path sdm:type;
@@ -59,12 +59,12 @@ sdm:ResourceReport.locationShape rdf:type sh:NodeShape;
   sh:name "object";
   sh:datatype xsd:anyURI
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.meansOfTransport;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#Mobiliteitsdienst.vervoermiddel'. The type of means of transport of the Resource.";
   sh:name "ResourceReport.meansOfTransport"
 ].
-sdm:ResourceReport.meansOfTransportShape rdf:type sh:NodeShape;
+sdmshape:ResourceReport.meansOfTransportShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ResourceReport.meansOfTransport;
     sh:property [
   sh:path sdm:type;
@@ -80,7 +80,7 @@ sdm:ResourceReport.meansOfTransportShape rdf:type sh:NodeShape;
   sh:minCount 1;
   sh:maxCount 1
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.number;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#number'. The number of resources.";
   sh:name "ResourceReport.number";
@@ -97,7 +97,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#service'. The MobilityService used within the ResourceReport.";
   sh:name "ResourceReport.service"
 ].
-sdm:ResourceReport.serviceShape rdf:type sh:NodeShape;
+sdmshape:ResourceReport.serviceShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ResourceReport.service;
     sh:property [
   sh:path sdm:type;
@@ -110,12 +110,12 @@ sdm:ResourceReport.serviceShape rdf:type sh:NodeShape;
   sh:name "object";
   sh:datatype xsd:anyURI
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.status;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#status'. State of a Resource. E.g. reserved, inactive, available. Determines whether a resource can be used.";
   sh:name "ResourceReport.status"
 ].
-sdm:ResourceReport.statusShape rdf:type sh:NodeShape;
+sdmshape:ResourceReport.statusShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ResourceReport.status;
     sh:property [
   sh:path sdm:type;
@@ -131,12 +131,12 @@ sdm:ResourceReport.statusShape rdf:type sh:NodeShape;
   sh:minCount 1;
   sh:maxCount 1
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.type;
   sh:description "Property. Model:'http://purl.org/dc/terms/type'. Nature of the Resource.";
   sh:name "ResourceReport.type"
 ].
-sdm:ResourceReport.typeShape rdf:type sh:NodeShape;
+sdmshape:ResourceReport.typeShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ResourceReport.type;
     sh:property [
   sh:path sdm:type;

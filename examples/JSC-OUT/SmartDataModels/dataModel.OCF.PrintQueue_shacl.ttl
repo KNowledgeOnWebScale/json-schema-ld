@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/PrintQueue/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:rt;
   sh:name "rt";
   sh:in (sdm:oic.r.printer.queue);
@@ -23,7 +23,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. The array of queue items for the printer.";
   sh:name "queue"
 ].
-sdm:QueueShape rdf:type sh:NodeShape;
+sdmshape:QueueShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Queue;
     sh:property [
   sh:path sdm:status;
@@ -41,7 +41,7 @@ sdm:QueueShape rdf:type sh:NodeShape;
   sh:maxLength 256;
   sh:datatype xsd:anyURI
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:n;
   sh:description "Property. Friendly name of the Resource";
   sh:name "n";

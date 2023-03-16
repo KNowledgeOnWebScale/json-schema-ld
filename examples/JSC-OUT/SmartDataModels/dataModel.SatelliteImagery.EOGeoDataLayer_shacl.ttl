@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.SatelliteImagery/master/EOGeoDataLayer/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It must be equal to EOGeoDataLayer.";
   sh:name "type";
@@ -44,7 +44,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. An array that describes for each layer (e.g. band1) or entity name, the type of information (e.g. categorical, numerical) and an array with the explanation of the depicted values (e.g. [1:oil, 0:no oil])";
   sh:name "contentInformation"
 ].
-sdm:ContentInformationShape rdf:type sh:NodeShape;
+sdmshape:ContentInformationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:ContentInformation;
     sh:property [
   sh:path sdm:layer_name;

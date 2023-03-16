@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/OpenChannelJunction/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity Type. it has to be OpenChannelJunction";
   sh:name "type";
@@ -25,7 +25,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Object providing information about the distance with the rest of the elements and a relationship with them.";
   sh:name "position"
 ].
-sdm:PositionShape rdf:type sh:NodeShape;
+sdmshape:PositionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Position;
     sh:property [
   sh:path sdm:distance;
@@ -45,7 +45,7 @@ sdm:PositionShape rdf:type sh:NodeShape;
   sh:description "Property. Identifier format of any NGSI entity."
 ])
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:downstreamNode;
   sh:or ([
   sh:minLength 1;

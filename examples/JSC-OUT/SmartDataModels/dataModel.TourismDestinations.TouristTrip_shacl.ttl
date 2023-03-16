@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It has to be TouristTrip. NGSI Entity type.";
   sh:name "type";
@@ -30,7 +30,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Destinations or places that make up a trip. For a trip where destination order is important use ItemList to specify that order included in the trips.";
   sh:name "itinerary"
 ].
-sdm:ItineraryShape rdf:type sh:NodeShape;
+sdmshape:ItineraryShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Itinerary;
     sh:property [
   sh:path sdm:position;
@@ -132,7 +132,7 @@ sdm:ItineraryShape rdf:type sh:NodeShape;
   sh:description "Property. Trip Schedule. This allows a schedule to be set over a repeated period of time used to describe an Trip that occurs regularly. In example nota in the beginning of the section for restriction to use this attribute. ";
   sh:name "tripSchedule"
 ].
-sdm:TripScheduleShape rdf:type sh:NodeShape;
+sdmshape:TripScheduleShape rdf:type sh:NodeShape;
     sh:targetClass sdm:TripSchedule;
     sh:property [
   sh:path sdm:dayOfWeek;
@@ -187,7 +187,7 @@ sdm:TripScheduleShape rdf:type sh:NodeShape;
   sh:name "endTime";
   sh:datatype xsd:dateTime
 ].
-sdm:ItineraryShape sh:property [
+sdmshape:ItineraryShape sh:property [
   sh:path sdm:duration;
   sh:description "Property. The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.";
   sh:name "duration";
@@ -197,7 +197,7 @@ sdm:ItineraryShape sh:property [
   sh:description "Property. Pitch of the Trip. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. ";
   sh:name "pitch"
 ].
-sdm:PitchShape rdf:type sh:NodeShape;
+sdmshape:PitchShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Pitch;
     sh:property [
   sh:path sdm:language;
@@ -208,7 +208,7 @@ sdm:PitchShape rdf:type sh:NodeShape;
   sh:name "article";
   sh:datatype xsd:string
 ].
-sdm:ItineraryShape sh:property [
+sdmshape:ItineraryShape sh:property [
   sh:path sdm:webSite;
   sh:description "Property. Link to the official website for more information.";
   sh:name "webSite";
@@ -223,7 +223,7 @@ sdm:ItineraryShape sh:property [
   sh:description "Property. Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'";
   sh:name "criticReview"
 ].
-sdm:CriticReviewShape rdf:type sh:NodeShape;
+sdmshape:CriticReviewShape rdf:type sh:NodeShape;
     sh:targetClass sdm:CriticReview;
     sh:property [
   sh:path sdm:language;
@@ -239,7 +239,7 @@ sdm:CriticReviewShape rdf:type sh:NodeShape;
   sh:description "Property. Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. ";
   sh:name "starRatingDetailed"
 ].
-sdm:StarRatingDetailedShape rdf:type sh:NodeShape;
+sdmshape:StarRatingDetailedShape rdf:type sh:NodeShape;
     sh:targetClass sdm:StarRatingDetailed;
     sh:property [
   sh:path sdm:1;
@@ -282,7 +282,7 @@ sdm:StarRatingDetailedShape rdf:type sh:NodeShape;
   sh:name "10";
   sh:datatype xsd:decimal
 ].
-sdm:CriticReviewShape sh:property [
+sdmshape:CriticReviewShape sh:property [
   sh:path sdm:audience;
   sh:name "audience";
   sh:in (sdm:adult sdm:allPublic sdm:children sdm:family sdm:senior sdm:teenager)
@@ -316,7 +316,7 @@ sdm:CriticReviewShape sh:property [
   sh:description "Property. A structured value representing a price or price range depending categories or public.";
   sh:name "priceSpecification"
 ].
-sdm:PriceSpecificationShape rdf:type sh:NodeShape;
+sdmshape:PriceSpecificationShape rdf:type sh:NodeShape;
     sh:targetClass sdm:PriceSpecification;
     sh:property [
   sh:path sdm:audience;

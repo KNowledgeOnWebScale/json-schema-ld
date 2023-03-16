@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/CrossSection/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be CrossSection.";
   sh:name "type";
@@ -49,7 +49,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Object providing information about the distance with the rest of the elements and a relationship with them.";
   sh:name "position"
 ].
-sdm:PositionShape rdf:type sh:NodeShape;
+sdmshape:PositionShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Position;
     sh:property [
   sh:path sdm:distance;
@@ -69,7 +69,7 @@ sdm:PositionShape rdf:type sh:NodeShape;
   sh:description "Property. Identifier format of any NGSI entity."
 ])
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:waterFlow;
   sh:description "Property. Water flow at the cross-section.";
   sh:name "waterFlow";

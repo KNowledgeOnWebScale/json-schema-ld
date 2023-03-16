@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.Environment/MosquitoDensity/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be MosquitoDensity";
   sh:name "type";
@@ -30,7 +30,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. The binomial (or) zoological nomenclature of the mosquito species and its count as identified by the device corresponding to this observation..";
   sh:name "mosquitoDensity"
 ].
-sdm:MosquitoDensityShape rdf:type sh:NodeShape;
+sdmshape:MosquitoDensityShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MosquitoDensity;
     sh:property [
   sh:path sdm:maleSpeciesCount;
@@ -53,12 +53,12 @@ sdm:MosquitoDensityShape rdf:type sh:NodeShape;
   sh:name "femaleSpeciesCount";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:deviceInfo;
   sh:description "Property. Model:'https://schema.org/Text. Information about the device associated with the observations.";
   sh:name "deviceInfo"
 ].
-sdm:DeviceInfoShape rdf:type sh:NodeShape;
+sdmshape:DeviceInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DeviceInfo;
     sh:property [
   sh:path sdm:rfID;
@@ -95,7 +95,7 @@ sdm:DeviceInfoShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Text'. Describes the information of the device, sensor or system in consideration.";
   sh:name "deviceModel"
 ].
-sdm:DeviceModelShape rdf:type sh:NodeShape;
+sdmshape:DeviceModelShape rdf:type sh:NodeShape;
     sh:targetClass sdm:DeviceModel;
     sh:property [
   sh:path sdm:brandName;
@@ -118,7 +118,7 @@ sdm:DeviceModelShape rdf:type sh:NodeShape;
   sh:name "modelURL";
   sh:datatype xsd:string
 ].
-sdm:DeviceInfoShape sh:property [
+sdmshape:DeviceInfoShape sh:property [
   sh:path sdm:observationDateTime;
   sh:description "Property. Last reported time of observation.";
   sh:name "observationDateTime";
@@ -128,9 +128,9 @@ sdm:DeviceInfoShape sh:property [
   sh:description "Property. Observed value of air temperature. Value is an object containing attributes representing statistical aggregates derived from past data.";
   sh:name "airTemperature"
 ].
-sdm:AirTemperatureShape rdf:type sh:NodeShape;
+sdmshape:AirTemperatureShape rdf:type sh:NodeShape;
     sh:targetClass sdm:AirTemperature.
-sdm:DeviceInfoShape sh:property [
+sdmshape:DeviceInfoShape sh:property [
   sh:path sdm:precipitation;
   sh:description "Property. Observed precipitation/rainfall level over a given duration.";
   sh:name "precipitation";

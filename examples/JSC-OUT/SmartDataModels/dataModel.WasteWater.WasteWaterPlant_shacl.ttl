@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.WasteWater/WasteWaterPlant/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be WasteWaterPlant";
   sh:name "type";
@@ -115,7 +115,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text. Acidity level or basicity level observed in the water. Object defining the temporal processing of the magnitude property during a period. It provides maximum, minimum, instant value and average";
   sh:name "pHTSA"
 ].
-sdm:PHTSAShape rdf:type sh:NodeShape;
+sdmshape:PHTSAShape rdf:type sh:NodeShape;
     sh:targetClass sdm:PHTSA;
     sh:property [
   sh:path sdm:avgOverTime;
@@ -138,12 +138,12 @@ sdm:PHTSAShape rdf:type sh:NodeShape;
   sh:name "minOverTime";
   sh:datatype xsd:decimal
 ].
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:municipalityInfo;
   sh:description "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"
 ].
-sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
+sdmshape:MunicipalityInfoShape rdf:type sh:NodeShape;
     sh:targetClass sdm:MunicipalityInfo;
     sh:property [
   sh:path sdm:district;

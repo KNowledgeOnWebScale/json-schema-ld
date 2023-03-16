@@ -13,7 +13,7 @@
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
     sh:targetClass <https://smart-data-models.github.io/dataModel.IT/Tests/schema.json>.
-sdm:schema.jsonShape sh:property [
+sdmshape:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be ITTests";
   sh:name "type";
@@ -47,7 +47,7 @@ sdm:schema.jsonShape sh:property [
   sh:description "Property. Model:'https://schema.org/Text'. Status of the execution of each of the tests.";
   sh:name "tests"
 ].
-sdm:TestShape rdf:type sh:NodeShape;
+sdmshape:TestShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Test;
     sh:property [
   sh:path sdm:name;

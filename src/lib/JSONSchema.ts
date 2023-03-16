@@ -203,7 +203,6 @@ export abstract class Schema {
             }
             // can this be implemented by .map?
             blank_list.push(blank_node_list('sh:in',enum_list ))
-            console.log(enum_list)
             this.enum = enum_list
         }
         if (this.isRequired) {
