@@ -54,20 +54,8 @@ gbfs:type dcterms:description "Type of alert.";
     rdfs:domain gbfs:Alert.
 gbfs:Type rdf:type skos:ConceptScheme.
 gbfs:type rdfs:range [
-  owl:oneOf (gbfs:system_closure gbfs:station_closure gbfs:station_move gbfs:other)
+  owl:oneOf ()
 ].
-gbfs:system_closure rdf:type skos:Concept;
-    skos:inScheme gbfs:Type;
-    rdfs:label "system_closure".
-gbfs:station_closure rdf:type skos:Concept;
-    skos:inScheme gbfs:Type;
-    rdfs:label "station_closure".
-gbfs:station_move rdf:type skos:Concept;
-    skos:inScheme gbfs:Type;
-    rdfs:label "station_move".
-gbfs:other rdf:type skos:Concept;
-    skos:inScheme gbfs:Type;
-    rdfs:label "other".
 gbfs:times dcterms:description "Array of objects indicating when the alert is in effect.";
     rdf:type rdf:Property;
     rdfs:label "times";

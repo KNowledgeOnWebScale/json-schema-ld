@@ -55,11 +55,11 @@ gbfs:RentalHourShape rdf:type sh:NodeShape;
     sh:property [
   sh:path gbfs:user_types;
   sh:name "user_types";
-  sh:in (gbfs:member gbfs:nonmember)
+  sh:in ()
 ], [
   sh:path gbfs:days;
   sh:name "days";
-  sh:in (gbfs:sun gbfs:mon gbfs:tue gbfs:wed gbfs:thu gbfs:fri gbfs:sat)
+  sh:in ()
 ], [
   sh:path gbfs:start_time;
   sh:description "Start time for the hours of operation of the system.";

@@ -63,7 +63,7 @@ gbfs:AlertShape rdf:type sh:NodeShape;
   sh:path gbfs:type;
   sh:description "Type of alert.";
   sh:name "type";
-  sh:in (gbfs:system_closure gbfs:station_closure gbfs:station_move gbfs:other);
+  sh:in ();
   sh:minCount 1;
   sh:maxCount 1
 ], [

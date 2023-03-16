@@ -151,7 +151,7 @@ gbfs:BikeShape sh:property [
 ], [
   sh:path gbfs:vehicle_equipment;
   sh:name "vehicle_equipment";
-  sh:in (gbfs:child_seat_a gbfs:child_seat_b gbfs:child_seat_c gbfs:winter_tires gbfs:snow_chains)
+  sh:in ()
 ], [
   sh:path gbfs:available_until;
   sh:description "The date and time when any rental of the vehicle must be completed. Added in v2.3.";

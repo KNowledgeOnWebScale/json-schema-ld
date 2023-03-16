@@ -57,7 +57,7 @@ gbfs:VersionShape rdf:type sh:NodeShape;
   sh:path gbfs:version;
   sh:description "The semantic version of the feed in the form X.Y";
   sh:name "version";
-  sh:in (gbfs:1.0 gbfs:1.1 gbfs:2.0 gbfs:2.1 gbfs:2.2 gbfs:2.3);
+  sh:in ();
   sh:minCount 1;
   sh:maxCount 1
 ], [

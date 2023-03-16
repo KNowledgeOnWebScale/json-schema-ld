@@ -186,10 +186,10 @@ export abstract class Schema {
             const enum_list = []
             for (const ele of data['enum']){
                 if (data['enum'] instanceof Array<string>) {
-                    // if (ele.includes('/')) {
-                    //     enum_list.push(namedNode(this.config.prefix + ':' + ele.replaceAll('/', '\/')));
-                    // }
-                    enum_list.push(namedNode(this.config.prefix, ele))
+                     if (ele.includes('/')) {
+                         enum_list.push(namedNode(this.config.prefix+':'+ encodeURIComponent(ele)));
+                     }
+                     //enum_list.push(namedNode(this.config.prefix+':'+ ele));
                 }
                 else
                     enum_list.push(literal(ele));
@@ -208,6 +208,7 @@ export abstract class Schema {
             else{
                 blank_list.push(blank_node_literal('sh:maxCount', 1))
             }
+
         }
         else{
             // When a property schema is not required and one or both of 'minItems' or 'maxItems' attributes of it are
@@ -217,8 +218,8 @@ export abstract class Schema {
 
             // Both blank and list functions in N3 requires to use an instance of N3.Writer as a parameter. We have to
             // leave the implementation during serialization.
-
         }
+        this.shacl= blank_list
     }
 
 }

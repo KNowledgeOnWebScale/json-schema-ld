@@ -215,7 +215,7 @@ export class JSCLDSchema{
                             for (const e of s.enum) {
                                 this.rdf_writer.addQuad(e,namedNode('rdf:type'), namedNode('skos:Concept'));
                                 this.rdf_writer.addQuad(e,namedNode('skos:inScheme'),namedNode(capitalizeLastFragment(s.id)));
-                                this.rdf_writer.addQuad(e, namedNode('rdfs:label'),literal(e.id.replace(this.config.prefix + ':', '')));
+                                this.rdf_writer.addQuad(e, namedNode('rdfs:label'),literal(decodeURIComponent(e.id.replace(this.config.prefix + ':', ''))));
                             }
                         }
 

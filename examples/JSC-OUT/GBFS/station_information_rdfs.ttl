@@ -93,32 +93,8 @@ gbfs:rental_methods rdf:type rdf:Property;
     rdfs:domain gbfs:Station.
 gbfs:Rental_methods rdf:type skos:ConceptScheme.
 gbfs:rental_methods rdfs:range [
-  owl:oneOf (gbfs:key gbfs:creditcard gbfs:paypass gbfs:applepay gbfs:androidpay gbfs:transitcard gbfs:accountnumber gbfs:phone)
+  owl:oneOf ()
 ].
-gbfs:key rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "key".
-gbfs:creditcard rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "creditcard".
-gbfs:paypass rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "paypass".
-gbfs:applepay rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "applepay".
-gbfs:androidpay rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "androidpay".
-gbfs:transitcard rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "transitcard".
-gbfs:accountnumber rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "accountnumber".
-gbfs:phone rdf:type skos:Concept;
-    skos:inScheme gbfs:Rental_methods;
-    rdfs:label "phone".
 gbfs:is_virtual_station dcterms:description "Is this station a location with or without physical infrastructure? (added in v2.1-RC)";
     rdf:type rdf:Property;
     rdfs:label "is_virtual_station";
@@ -136,34 +112,16 @@ gbfs:type rdf:type rdf:Property;
     rdfs:domain gbfs:StationArea.
 gbfs:Type rdf:type skos:ConceptScheme.
 gbfs:type rdfs:range [
-  owl:oneOf (gbfs:MultiPolygon)
+  owl:oneOf ()
 ].
-gbfs:MultiPolygon rdf:type skos:Concept;
-    skos:inScheme gbfs:Type;
-    rdfs:label "MultiPolygon".
 gbfs:parking_type dcterms:description "Type of parking station. Added in v2.3";
     rdf:type rdf:Property;
     rdfs:label "parking_type";
     rdfs:domain gbfs:StationArea.
 gbfs:Parking_type rdf:type skos:ConceptScheme.
 gbfs:parking_type rdfs:range [
-  owl:oneOf (gbfs:parking_lot gbfs:street_parking gbfs:underground_parking gbfs:sidewalk_parking gbfs:other)
+  owl:oneOf ()
 ].
-gbfs:parking_lot rdf:type skos:Concept;
-    skos:inScheme gbfs:Parking_type;
-    rdfs:label "parking_lot".
-gbfs:street_parking rdf:type skos:Concept;
-    skos:inScheme gbfs:Parking_type;
-    rdfs:label "street_parking".
-gbfs:underground_parking rdf:type skos:Concept;
-    skos:inScheme gbfs:Parking_type;
-    rdfs:label "underground_parking".
-gbfs:sidewalk_parking rdf:type skos:Concept;
-    skos:inScheme gbfs:Parking_type;
-    rdfs:label "sidewalk_parking".
-gbfs:other rdf:type skos:Concept;
-    skos:inScheme gbfs:Parking_type;
-    rdfs:label "other".
 gbfs:parking_hoop dcterms:description "Are parking hoops present at this station? Added in v2.3";
     rdf:type rdf:Property;
     rdfs:label "parking_hoop";

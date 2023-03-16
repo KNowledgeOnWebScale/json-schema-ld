@@ -50,47 +50,8 @@ gbfs:name dcterms:description "Key identifying the type of feed this is. The key
     rdfs:domain gbfs:Feed.
 gbfs:Name rdf:type skos:ConceptScheme.
 gbfs:name rdfs:range [
-  owl:oneOf (gbfs:gbfs gbfs:gbfs_versions gbfs:system_information gbfs:vehicle_types gbfs:station_information gbfs:station_status gbfs:free_bike_status gbfs:system_hours gbfs:system_alerts gbfs:system_calendar gbfs:system_regions gbfs:system_pricing_plans gbfs:geofencing_zones)
+  owl:oneOf ()
 ].
-gbfs:gbfs rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "gbfs".
-gbfs:gbfs_versions rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "gbfs_versions".
-gbfs:system_information rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "system_information".
-gbfs:vehicle_types rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "vehicle_types".
-gbfs:station_information rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "station_information".
-gbfs:station_status rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "station_status".
-gbfs:free_bike_status rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "free_bike_status".
-gbfs:system_hours rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "system_hours".
-gbfs:system_alerts rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "system_alerts".
-gbfs:system_calendar rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "system_calendar".
-gbfs:system_regions rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "system_regions".
-gbfs:system_pricing_plans rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "system_pricing_plans".
-gbfs:geofencing_zones rdf:type skos:Concept;
-    skos:inScheme gbfs:Name;
-    rdfs:label "geofencing_zones".
 gbfs:url dcterms:description "URL for the feed.";
     rdf:type rdf:Property;
     rdfs:label "url";

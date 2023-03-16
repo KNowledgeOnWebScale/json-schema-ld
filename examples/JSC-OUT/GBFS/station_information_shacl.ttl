@@ -112,7 +112,7 @@ gbfs:StationShape rdf:type sh:NodeShape;
 ], [
   sh:path gbfs:rental_methods;
   sh:name "rental_methods";
-  sh:in (gbfs:key gbfs:creditcard gbfs:paypass gbfs:applepay gbfs:androidpay gbfs:transitcard gbfs:accountnumber gbfs:phone)
+  sh:in ()
 ], [
   sh:path gbfs:is_virtual_station;
   sh:description "Is this station a location with or without physical infrastructure? (added in v2.1-RC)";
@@ -128,14 +128,14 @@ gbfs:StationAreaShape rdf:type sh:NodeShape;
     sh:property [
   sh:path gbfs:type;
   sh:name "type";
-  sh:in (gbfs:MultiPolygon);
+  sh:in ();
   sh:minCount 1;
   sh:maxCount 1
 ], [
   sh:path gbfs:parking_type;
   sh:description "Type of parking station. Added in v2.3";
   sh:name "parking_type";
-  sh:in (gbfs:parking_lot gbfs:street_parking gbfs:underground_parking gbfs:sidewalk_parking gbfs:other)
+  sh:in ()
 ], [
   sh:path gbfs:parking_hoop;
   sh:description "Are parking hoops present at this station? Added in v2.3";

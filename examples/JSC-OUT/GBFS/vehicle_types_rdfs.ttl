@@ -55,32 +55,8 @@ gbfs:form_factor dcterms:description "The vehicle's general form factor.";
     rdfs:domain gbfs:VehicleType.
 gbfs:Form_factor rdf:type skos:ConceptScheme.
 gbfs:form_factor rdfs:range [
-  owl:oneOf (gbfs:bicycle gbfs:cargo_bicycle gbfs:car gbfs:moped gbfs:scooter_standing gbfs:scooter_seated gbfs:other gbfs:scooter)
+  owl:oneOf ()
 ].
-gbfs:bicycle rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "bicycle".
-gbfs:cargo_bicycle rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "cargo_bicycle".
-gbfs:car rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "car".
-gbfs:moped rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "moped".
-gbfs:scooter_standing rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "scooter_standing".
-gbfs:scooter_seated rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "scooter_seated".
-gbfs:other rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "other".
-gbfs:scooter rdf:type skos:Concept;
-    skos:inScheme gbfs:Form_factor;
-    rdfs:label "scooter".
 gbfs:rider_capacity dcterms:description "The number of riders (driver included) the vehicle can legally accommodate";
     rdf:type rdf:Property;
     rdfs:label "rider_capacity";
@@ -102,32 +78,8 @@ gbfs:propulsion_type dcterms:description "The primary propulsion type of the veh
     rdfs:domain gbfs:VehicleType.
 gbfs:Propulsion_type rdf:type skos:ConceptScheme.
 gbfs:propulsion_type rdfs:range [
-  owl:oneOf (gbfs:human gbfs:electric_assist gbfs:electric gbfs:combustion gbfs:combustion_diesel gbfs:hybrid gbfs:plug_in_hybrid gbfs:hydrogen_fuel_cell)
+  owl:oneOf ()
 ].
-gbfs:human rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "human".
-gbfs:electric_assist rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "electric_assist".
-gbfs:electric rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "electric".
-gbfs:combustion rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "combustion".
-gbfs:combustion_diesel rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "combustion_diesel".
-gbfs:hybrid rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "hybrid".
-gbfs:plug_in_hybrid rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "plug_in_hybrid".
-gbfs:hydrogen_fuel_cell rdf:type skos:Concept;
-    skos:inScheme gbfs:Propulsion_type;
-    rdfs:label "hydrogen_fuel_cell".
 gbfs:eco_label dcterms:description "Vehicle air quality certificate. added in v2.3.";
     rdf:type rdf:Property;
     rdfs:label "eco_label";
@@ -160,38 +112,8 @@ gbfs:vehicle_accessories rdf:type rdf:Property;
     rdfs:domain gbfs:VehicleType.
 gbfs:Vehicle_accessories rdf:type skos:ConceptScheme.
 gbfs:vehicle_accessories rdfs:range [
-  owl:oneOf (gbfs:air_conditioning gbfs:automatic gbfs:manual gbfs:convertible gbfs:cruise_control gbfs:doors_2 gbfs:doors_3 gbfs:doors_4 gbfs:doors_5 gbfs:navigation)
+  owl:oneOf ()
 ].
-gbfs:air_conditioning rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "air_conditioning".
-gbfs:automatic rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "automatic".
-gbfs:manual rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "manual".
-gbfs:convertible rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "convertible".
-gbfs:cruise_control rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "cruise_control".
-gbfs:doors_2 rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "doors_2".
-gbfs:doors_3 rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "doors_3".
-gbfs:doors_4 rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "doors_4".
-gbfs:doors_5 rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "doors_5".
-gbfs:navigation rdf:type skos:Concept;
-    skos:inScheme gbfs:Vehicle_accessories;
-    rdfs:label "navigation".
 gbfs:g_CO2_km dcterms:description "Maximum quantity of CO2, in grams, emitted per kilometer, according to the WLTP. Added in v2.3";
     rdf:type rdf:Property;
     rdfs:label "g_CO2_km";
@@ -243,20 +165,8 @@ gbfs:return_constraint dcterms:description "The conditions for returning the veh
     rdfs:domain gbfs:VehicleType.
 gbfs:Return_constraint rdf:type skos:ConceptScheme.
 gbfs:return_constraint rdfs:range [
-  owl:oneOf (gbfs:free_floating gbfs:roundtrip_station gbfs:any_station gbfs:hybrid)
+  owl:oneOf ()
 ].
-gbfs:free_floating rdf:type skos:Concept;
-    skos:inScheme gbfs:Return_constraint;
-    rdfs:label "free_floating".
-gbfs:roundtrip_station rdf:type skos:Concept;
-    skos:inScheme gbfs:Return_constraint;
-    rdfs:label "roundtrip_station".
-gbfs:any_station rdf:type skos:Concept;
-    skos:inScheme gbfs:Return_constraint;
-    rdfs:label "any_station".
-gbfs:hybrid rdf:type skos:Concept;
-    skos:inScheme gbfs:Return_constraint;
-    rdfs:label "hybrid".
 gbfs:vehicle_assets dcterms:description "An object where each key defines one of the items listed below added in v2.3-RC.";
     rdf:type rdf:Property;
     rdfs:label "vehicle_assets";
