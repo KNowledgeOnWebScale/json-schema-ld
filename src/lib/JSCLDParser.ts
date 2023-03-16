@@ -155,7 +155,7 @@ export class JSCLDSchema{
                  * Classes
                  */
                 if (s instanceof ClassSchema){
-                    shacl_shape_uri = generateShape(this.config.prefix, s.id)
+                    shacl_shape_uri = generateShape(this.config.prefix+'shape', s.id)
                     // Class SHACL NodeShape
                     this.shacl_writer.addQuad(node_node_node(shacl_shape_uri, 'rdf:type', 'sh:NodeShape'));
                     // Class Shacl targetClass
@@ -174,7 +174,7 @@ export class JSCLDSchema{
                  */
                 else {
                     // property type
-                    shacl_shape_uri = generateShape(this.config.prefix, s.subject)
+                    shacl_shape_uri = generateShape(this.config.prefix+'shape', s.subject)
                     const shacl_path_node = blank_node_node('sh:path', s.id);
 
                     // To do: handle non-required property which has 'minItems' or 'maxItems' attribute.

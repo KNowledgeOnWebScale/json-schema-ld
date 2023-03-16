@@ -12,7 +12,7 @@
 
 gbfsshape:system_alertsjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#system_alertsjson>.
-gbfs:system_alertsjsonShape sh:property [
+gbfsshape:system_alertsjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,14 +43,14 @@ gbfs:system_alertsjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:alerts;
   sh:name "alerts";
   sh:minCount 1
 ].
-gbfs:AlertShape rdf:type sh:NodeShape;
+gbfsshape:AlertShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Alert;
     sh:property [
   sh:path gbfs:alert_id;
@@ -63,7 +63,7 @@ gbfs:AlertShape rdf:type sh:NodeShape;
   sh:path gbfs:type;
   sh:description "Type of alert.";
   sh:name "type";
-  sh:in ();
+  sh:in (gbfs:system_closure gbfs:station_closure gbfs:station_move gbfs:other);
   sh:minCount 1;
   sh:maxCount 1
 ], [
@@ -71,7 +71,7 @@ gbfs:AlertShape rdf:type sh:NodeShape;
   sh:description "Array of objects indicating when the alert is in effect.";
   sh:name "times"
 ].
-gbfs:TimeShape rdf:type sh:NodeShape;
+gbfsshape:TimeShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Time;
     sh:property [
   sh:path gbfs:start;
@@ -86,7 +86,7 @@ gbfs:TimeShape rdf:type sh:NodeShape;
   sh:minInclusive 1450155600;
   sh:datatype xsd:integer
 ].
-gbfs:AlertShape sh:property [
+gbfsshape:AlertShape sh:property [
   sh:path gbfs:station_ids;
   sh:name "station_ids";
   sh:datatype xsd:string

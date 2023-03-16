@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.DIH/DigitalInnovationHub/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.DIH/DigitalInnovationHub/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be DigitalInnovationHub";
   sh:name "type";
@@ -36,15 +36,15 @@
   sh:name "location"
 ].
 sdm:LocationShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Location;
-    sh:property [
+    sh:targetClass sdm:Location.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:address;
   sh:description "Property. Model:'https://schema.org/PostalAddress'. PostalAddress of the Digital Innovation Hub.";
   sh:name "address"
 ].
 sdm:AddressShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Address;
-    sh:property [
+    sh:targetClass sdm:Address.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:socialAccounts;
   sh:description "Property. Model:'https://schema.org/StructuredValue'. SocialAccounts of the Digital Innovation Hub.";
   sh:name "socialAccounts"
@@ -67,7 +67,8 @@ sdm:SocialAccountShape rdf:type sh:NodeShape;
   sh:path sdm:instagram;
   sh:name "instagram";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:dateSubmitted;
   sh:description "Property. The date and time of this observation in ISO8601 UTC format. Model:'https://schema.org/DateTime'";
   sh:name "dateSubmitted";

@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.KeyPerformanceIndicator/keyPerformanceIndicator/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.KeyPerformanceIndicator/keyPerformanceIndicator/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It must be KeyPerformanceIndicator. Enum:'KeyPerformanceIndicator'";
   sh:name "type";
@@ -99,7 +99,8 @@ sdm:CalculationPeriodShape rdf:type sh:NodeShape;
   sh:path sdm:to;
   sh:name "to";
   sh:datatype xsd:date
-], [
+].
+sdm:AggregatedDatumShape sh:property [
   sh:path sdm:currentStanding;
   sh:description "Property. The KPI's current standing as per its kpiValue. Allowed values: one Of (very good, good, fair, bad, very bad)";
   sh:name "currentStanding";

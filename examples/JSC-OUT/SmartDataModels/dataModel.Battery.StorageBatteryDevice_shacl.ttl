@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/data-models.Energy/StorageBatteryDevice/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/data-models.Energy/StorageBatteryDevice/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It has to be StorageBatteryDevice. Model:'https://schema.org/Text' ";
   sh:name "type";
@@ -144,7 +144,8 @@ sdm:DimensionShape rdf:type sh:NodeShape;
   sh:name "depth";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:weight;
   sh:description "Property. Model:'https://schema.org/weight'. Weight. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KGM** represents KiloGramme. Units:'Kilograms'";
   sh:name "weight";
@@ -226,7 +227,8 @@ sdm:OperatingVoltageShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:operatingAmpere;
   sh:description "Property. Model:'https://schema.org/Number'.  Minimum and Maximum Ampere allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere. Units:'amperes'";
   sh:name "operatingAmpere"
@@ -243,7 +245,8 @@ sdm:OperatingAmpereShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:operatingFrequency;
   sh:description "Property. Model:'https://schema.org/Number'.  Minimum and Maximum frequency allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HTZ** represents Hertz. Units:'hertz'";
   sh:name "operatingFrequency"
@@ -260,7 +263,8 @@ sdm:OperatingFrequencyShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:massEnergyDensity;
   sh:description "Property. Model:'https://schema.org/Number'. Mass Energy density *(Code D)*. Ratio between the capacity of the battery to deliver a certain power for a certain time and its weight. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram. Units:'W hour / Kg'";
   sh:name "massEnergyDensity"
@@ -277,7 +281,8 @@ sdm:MassEnergyDensityShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:volEnergyDensity;
   sh:description "Property. Model:'https://schema.org/Number'. Volume Energy density *(Code D)*. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/L** WattHour per Liter. Units:'Wh/L'";
   sh:name "volEnergyDensity"
@@ -294,7 +299,8 @@ sdm:VolEnergyDensityShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:maxOutputPower;
   sh:description "Property. Model:'https://schema.org/Number'. Maximum Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt. Units:'Kw'";
   sh:name "maxOutputPower";
@@ -330,7 +336,8 @@ sdm:OperatingAltitudeShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:averageLife;
   sh:description "Property. Model:'https://schema.org/Number'. average life under normal battery usage conditions at reference temperatures. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **ANN** represents Year. Units:'year'";
   sh:name "averageLife";
@@ -352,7 +359,8 @@ sdm:LifeCycleNumberShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:OperatingTemperatureShape sh:property [
   sh:path sdm:toolBMS;
   sh:description "Property. Model:'https://schema.org/Boolean'. Use of a Battery Management System tool to protect, guarantee and optimize battery life. (`true` for yes)";
   sh:name "toolBMS";

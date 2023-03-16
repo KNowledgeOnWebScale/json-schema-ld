@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Streetlighting/Streetlight/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Streetlighting/Streetlight/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be StreetlightGroup";
   sh:name "type";
@@ -79,7 +79,8 @@ sdm:SwitchingOnHourShape rdf:type sh:NodeShape;
   sh:description "Property. Timestamp of the last change of lamp made";
   sh:name "description";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:switchingMode;
   sh:name "switchingMode";
   sh:in (sdm:night-ON sdm:night-OFF sdm:night-LOW sdm:always-ON sdm:day-ON sdm:day-OFF sdm:day-LOW)

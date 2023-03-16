@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/OpenChannelSystem/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/OpenChannelSystem/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be OpenChannelSystem";
   sh:name "type";

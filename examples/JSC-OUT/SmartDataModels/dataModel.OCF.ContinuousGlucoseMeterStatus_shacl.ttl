@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.OCF/ContinuousGlucoseMeterStatus/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.OCF/ContinuousGlucoseMeterStatus/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:cgmtype;
   sh:description "Property. This Property describes the CGM measurement type.";
   sh:name "cgmtype";

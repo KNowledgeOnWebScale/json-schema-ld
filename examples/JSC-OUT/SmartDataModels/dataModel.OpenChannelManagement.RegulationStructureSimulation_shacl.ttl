@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/RegulationStructureSimulation/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/data-models.OpenChannelManagement/RegulationStructureSimulation/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be RegulationStructureSimulation.";
   sh:name "type";
@@ -95,7 +95,8 @@ sdm:SimulationOutputShape rdf:type sh:NodeShape;
   sh:datatype xsd:anyURI;
   sh:description "Property. Identifier format of any NGSI entity"
 ])
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:inputParameters;
   sh:description "Property. Description of the set of the modifications to be applied to the Regulation Structure for the simulation.";
   sh:name "inputParameters"
@@ -122,7 +123,8 @@ sdm:InputParameterShape rdf:type sh:NodeShape;
   sh:datatype xsd:anyURI;
   sh:description "Property. Identifier format of any NGSI entity"
 ])
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:initialConditions;
   sh:description "Property. Description of the set of the modifications to be applied to the Regulation Structure for the simulation.";
   sh:name "initialConditions"

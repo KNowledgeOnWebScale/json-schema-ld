@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity Type. it has to be AgriCrop";
   sh:name "type";
@@ -77,7 +77,8 @@ sdm:HarvestingIntervalShape rdf:type sh:NodeShape;
   sh:path sdm:description;
   sh:name "description";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:plantingFrom;
   sh:description "Property. Model:'http://schema.org/URL'. A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.";
   sh:name "plantingFrom"

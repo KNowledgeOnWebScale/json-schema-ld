@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.js#>.
 
 <https://w3id.org/sdm/shapes/schema.js#schema.jsShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/data-models/Environment/WaterObserved/schema.js>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/data-models/Environment/WaterObserved/schema.js>.
+sdm:schema.jsShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be WaterObserved";
   sh:name "type";

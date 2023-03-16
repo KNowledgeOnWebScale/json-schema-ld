@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be Museum";
   sh:name "type";
@@ -49,8 +49,8 @@
   sh:name "contactPoint"
 ].
 sdm:ContactPointShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:ContactPoint;
-    sh:property [
+    sh:targetClass sdm:ContactPoint.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:touristArea;
   sh:description "Property. Model:'https://schema.org/Text'. Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance `Costa del Sol`.";
   sh:name "touristArea";

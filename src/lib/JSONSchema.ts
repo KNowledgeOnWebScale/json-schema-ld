@@ -186,16 +186,24 @@ export abstract class Schema {
             const enum_list = []
             for (const ele of data['enum']){
                 if (data['enum'] instanceof Array<string>) {
-                     if (ele.includes('/')) {
-                         enum_list.push(namedNode(this.config.prefix+':'+ encodeURIComponent(ele)));
-                     }
-                     //enum_list.push(namedNode(this.config.prefix+':'+ ele));
+                    if ( typeof ele === 'string'){
+                        if (ele.includes('/')) {
+                            enum_list.push(namedNode(this.config.prefix+':'+ encodeURIComponent(ele)));
+                        }
+                        else {
+                            enum_list.push(namedNode(this.config.prefix + ':' + ele));
+                        }
+                    }
+                    else{
+                        enum_list.push(namedNode(this.config.prefix + ':' + String(ele)))
+                    }
                 }
                 else
                     enum_list.push(literal(ele));
             }
             // can this be implemented by .map?
             blank_list.push(blank_node_list('sh:in',enum_list ))
+            console.log(enum_list)
             this.enum = enum_list
         }
         if (this.isRequired) {

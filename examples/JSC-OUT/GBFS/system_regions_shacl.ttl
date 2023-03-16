@@ -12,7 +12,7 @@
 
 gbfsshape:system_regionsjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#system_regionsjson>.
-gbfs:system_regionsjsonShape sh:property [
+gbfsshape:system_regionsjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,7 +43,7 @@ gbfs:system_regionsjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:regions;
@@ -51,7 +51,7 @@ gbfs:DatumShape rdf:type sh:NodeShape;
   sh:name "regions";
   sh:minCount 1
 ].
-gbfs:RegionShape rdf:type sh:NodeShape;
+gbfsshape:RegionShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Region;
     sh:property [
   sh:path gbfs:region_id;

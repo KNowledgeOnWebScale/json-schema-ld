@@ -50,8 +50,11 @@ gbfs:type dcterms:description "FeatureCollection as per IETF RFC 7946.";
     rdfs:domain gbfs:GeofencingZone.
 gbfs:Type rdf:type skos:ConceptScheme.
 gbfs:type rdfs:range [
-  owl:oneOf ()
+  owl:oneOf (gbfs:FeatureCollection)
 ].
+gbfs:FeatureCollection rdf:type skos:Concept;
+    skos:inScheme gbfs:Type;
+    rdfs:label "FeatureCollection".
 gbfs:features dcterms:description "Array of objects.";
     rdf:type rdf:Property;
     rdfs:label "features";
@@ -64,8 +67,11 @@ gbfs:type rdf:type rdf:Property;
     rdfs:domain gbfs:Feature.
 gbfs:Type rdf:type skos:ConceptScheme.
 gbfs:type rdfs:range [
-  owl:oneOf ()
+  owl:oneOf (gbfs:Feature)
 ].
+gbfs:Feature rdf:type skos:Concept;
+    skos:inScheme gbfs:Type;
+    rdfs:label "Feature".
 gbfs:properties dcterms:description "Describing travel allowances and limitations.";
     rdf:type rdf:Property;
     rdfs:label "properties";
@@ -132,5 +138,8 @@ gbfs:type rdf:type rdf:Property;
     rdfs:domain gbfs:Geometry.
 gbfs:Type rdf:type skos:ConceptScheme.
 gbfs:type rdfs:range [
-  owl:oneOf ()
+  owl:oneOf (gbfs:MultiPolygon)
 ].
+gbfs:MultiPolygon rdf:type skos:Concept;
+    skos:inScheme gbfs:Type;
+    rdfs:label "MultiPolygon".

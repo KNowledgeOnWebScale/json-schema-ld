@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be SimulationResult";
   sh:name "type";
@@ -58,7 +58,8 @@ sdm:OutputParameterShape rdf:type sh:NodeShape;
   sh:pattern "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$";
   sh:datatype xsd:string
 ] [ sh:datatype xsd:anyURI ])
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:outputFile;
   sh:description "Property. Link to binary file containing results of applied simulation to the network.";
   sh:name "outputFile";

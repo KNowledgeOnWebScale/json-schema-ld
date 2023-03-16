@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.WasteWater/WasteWaterPlant/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.WasteWater/WasteWaterPlant/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be WasteWaterPlant";
   sh:name "type";
@@ -137,7 +137,8 @@ sdm:PHTSAShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Number'. Describes the minimum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value.";
   sh:name "minOverTime";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:municipalityInfo;
   sh:description "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"

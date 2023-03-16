@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Consumption/ConsumptionCost/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Consumption/ConsumptionCost/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be ConsumptionCost.";
   sh:name "type";
@@ -34,5 +34,5 @@
   sh:datatype xsd:string
 ], [
   sh:path sdm:consumptionPoint;
-  sh:xone ([ sh:datatype <uuidType> ])
+  sh:xone ([ sh:datatype xsd:uuidType ])
 ].

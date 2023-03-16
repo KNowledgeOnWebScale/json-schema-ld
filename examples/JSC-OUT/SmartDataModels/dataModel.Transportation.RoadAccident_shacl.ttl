@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. it has to be RoadAccident";
   sh:name "type";
@@ -61,7 +61,8 @@ sdm:AccidentStatisticalDateShape rdf:type sh:NodeShape;
   sh:path sdm:hour;
   sh:name "hour";
   sh:datatype xsd:integer
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:accidentType;
   sh:name "accidentType";
   sh:in (sdm:1 sdm:2 sdm:3 sdm:4 sdm:5 sdm:6 sdm:7 sdm:8 sdm:9 sdm:10 sdm:11 sdm:12)

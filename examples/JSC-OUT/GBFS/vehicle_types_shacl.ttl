@@ -12,7 +12,7 @@
 
 gbfsshape:vehicle_typesjson-added-in-v21-rcShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#vehicle_typesjson-added-in-v21-rc>.
-gbfs:vehicle_typesjson-added-in-v21-rcShape sh:property [
+gbfsshape:vehicle_typesjson-added-in-v21-rcShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,7 +43,7 @@ gbfs:vehicle_typesjson-added-in-v21-rcShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:vehicle_types;
@@ -51,7 +51,7 @@ gbfs:DatumShape rdf:type sh:NodeShape;
   sh:name "vehicle_types";
   sh:minCount 1
 ].
-gbfs:VehicleTypeShape rdf:type sh:NodeShape;
+gbfsshape:VehicleTypeShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:VehicleType;
     sh:property [
   sh:path gbfs:vehicle_type_id;
@@ -64,7 +64,7 @@ gbfs:VehicleTypeShape rdf:type sh:NodeShape;
   sh:path gbfs:form_factor;
   sh:description "The vehicle's general form factor.";
   sh:name "form_factor";
-  sh:in ();
+  sh:in (gbfs:bicycle gbfs:cargo_bicycle gbfs:car gbfs:moped gbfs:scooter_standing gbfs:scooter_seated gbfs:other gbfs:scooter);
   sh:minCount 1;
   sh:maxCount 1
 ], [
@@ -89,7 +89,7 @@ gbfs:VehicleTypeShape rdf:type sh:NodeShape;
   sh:path gbfs:propulsion_type;
   sh:description "The primary propulsion type of the vehicle. Updated in v2.3 to represent car-sharing";
   sh:name "propulsion_type";
-  sh:in ();
+  sh:in (gbfs:human gbfs:electric_assist gbfs:electric gbfs:combustion gbfs:combustion_diesel gbfs:hybrid gbfs:plug_in_hybrid gbfs:hydrogen_fuel_cell);
   sh:minCount 1;
   sh:maxCount 1
 ], [
@@ -97,7 +97,7 @@ gbfs:VehicleTypeShape rdf:type sh:NodeShape;
   sh:description "Vehicle air quality certificate. added in v2.3.";
   sh:name "eco_label"
 ].
-gbfs:EcoLabelShape rdf:type sh:NodeShape;
+gbfsshape:EcoLabelShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:EcoLabel;
     sh:property [
   sh:path gbfs:country_code;
@@ -111,7 +111,7 @@ gbfs:EcoLabelShape rdf:type sh:NodeShape;
   sh:name "eco_sticker";
   sh:datatype xsd:string
 ].
-gbfs:VehicleTypeShape sh:property [
+gbfsshape:VehicleTypeShape sh:property [
   sh:path gbfs:max_range_meters;
   sh:description "The furthest distance in meters that the vehicle can travel without recharging or refueling when it has the maximum amount of energy potential.";
   sh:name "max_range_meters";
@@ -125,7 +125,7 @@ gbfs:VehicleTypeShape sh:property [
 ], [
   sh:path gbfs:vehicle_accessories;
   sh:name "vehicle_accessories";
-  sh:in ()
+  sh:in (gbfs:air_conditioning gbfs:automatic gbfs:manual gbfs:convertible gbfs:cruise_control gbfs:doors_2 gbfs:doors_3 gbfs:doors_4 gbfs:doors_5 gbfs:navigation)
 ], [
   sh:path gbfs:g_CO2_km;
   sh:description "Maximum quantity of CO2, in grams, emitted per kilometer, according to the WLTP. Added in v2.3";
@@ -180,13 +180,13 @@ gbfs:VehicleTypeShape sh:property [
   sh:path gbfs:return_constraint;
   sh:description "The conditions for returning the vehicle at the end of the trip. Added in v2.3-RC as return_type, and updated to return_constraint in v2.3.";
   sh:name "return_constraint";
-  sh:in ()
+  sh:in (gbfs:free_floating gbfs:roundtrip_station gbfs:any_station gbfs:hybrid)
 ], [
   sh:path gbfs:vehicle_assets;
   sh:description "An object where each key defines one of the items listed below added in v2.3-RC.";
   sh:name "vehicle_assets"
 ].
-gbfs:VehicleAssetShape rdf:type sh:NodeShape;
+gbfsshape:VehicleAssetShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:VehicleAsset;
     sh:property [
   sh:path gbfs:icon_url;
@@ -208,7 +208,7 @@ gbfs:VehicleAssetShape rdf:type sh:NodeShape;
   sh:maxCount 1;
   sh:datatype xsd:date
 ].
-gbfs:VehicleTypeShape sh:property [
+gbfsshape:VehicleTypeShape sh:property [
   sh:path gbfs:default_pricing_plan_id;
   sh:description "A plan_id as defined in system_pricing_plans.json added in v2.3-RC.";
   sh:name "default_pricing_plan_id";

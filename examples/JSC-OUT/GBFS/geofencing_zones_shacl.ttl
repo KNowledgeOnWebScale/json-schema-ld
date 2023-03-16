@@ -12,7 +12,7 @@
 
 gbfsshape:geofencing_zonesjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#geofencing_zonesjson>.
-gbfs:geofencing_zonesjsonShape sh:property [
+gbfsshape:geofencing_zonesjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,20 +43,20 @@ gbfs:geofencing_zonesjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:geofencing_zones;
   sh:description "Each geofenced zone and its associated rules and attributes is described as an object within the array of features.";
   sh:name "geofencing_zones"
 ].
-gbfs:GeofencingZoneShape rdf:type sh:NodeShape;
+gbfsshape:GeofencingZoneShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:GeofencingZone;
     sh:property [
   sh:path gbfs:type;
   sh:description "FeatureCollection as per IETF RFC 7946.";
   sh:name "type";
-  sh:in ();
+  sh:in (gbfs:FeatureCollection);
   sh:minCount 1;
   sh:maxCount 1
 ], [
@@ -65,12 +65,12 @@ gbfs:GeofencingZoneShape rdf:type sh:NodeShape;
   sh:name "features";
   sh:minCount 1
 ].
-gbfs:FeatureShape rdf:type sh:NodeShape;
+gbfsshape:FeatureShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Feature;
     sh:property [
   sh:path gbfs:type;
   sh:name "type";
-  sh:in ();
+  sh:in (gbfs:Feature);
   sh:minCount 1;
   sh:maxCount 1
 ], [
@@ -80,7 +80,7 @@ gbfs:FeatureShape rdf:type sh:NodeShape;
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:PropertyShape rdf:type sh:NodeShape;
+gbfsshape:PropertyShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Property;
     sh:property [
   sh:path gbfs:name;
@@ -104,7 +104,7 @@ gbfs:PropertyShape rdf:type sh:NodeShape;
   sh:description "Array that contains one object per rule.";
   sh:name "rules"
 ].
-gbfs:RuleShape rdf:type sh:NodeShape;
+gbfsshape:RuleShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Rule;
     sh:property [
   sh:path gbfs:vehicle_type_id;
@@ -142,12 +142,12 @@ gbfs:RuleShape rdf:type sh:NodeShape;
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:GeometryShape rdf:type sh:NodeShape;
+gbfsshape:GeometryShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Geometry;
     sh:property [
   sh:path gbfs:type;
   sh:name "type";
-  sh:in ();
+  sh:in (gbfs:MultiPolygon);
   sh:minCount 1;
   sh:maxCount 1
 ].

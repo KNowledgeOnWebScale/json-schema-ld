@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be RoadSegment";
   sh:name "type";
@@ -267,7 +267,8 @@ sdm:LaneInfoShape rdf:type sh:NodeShape;
   sh:description "Property. Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:'FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'";
   sh:name "laneDirection";
   sh:in (sdm:BACKWARD sdm:FORWARD sdm:INBOUND sdm:LEFT sdm:OUTBOUND sdm:RIGHT)
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:pedestrianPathPlacement;
   sh:description "Property. Describes the presence and placement of pedestrian along the road segment corresponding to this observation. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'";
   sh:name "pedestrianPathPlacement";

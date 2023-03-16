@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Device/Device/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Device/Device/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be Device";
   sh:name "type";
@@ -38,9 +38,6 @@
   sh:name "ipAddress";
   sh:datatype xsd:string
 ], [
-  sh:path sdm:ipAddress;
-  sh:xone ()
-], [
   sh:path sdm:configuration;
   sh:description "Property. Model:'https://schema.org/StructuredValue'. Device's technical configuration. This attribute is intended to be a array properties and their values which capture parameters which have to do with the configuration of a device (timeouts, reporting periods, etc.) and which are not currently covered by the standard attributes defined by this model.";
   sh:name "configuration"
@@ -55,7 +52,8 @@ sdm:ConfigurationShape rdf:type sh:NodeShape;
   sh:path sdm:value;
   sh:name "value";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:dateInstalled;
   sh:description "Property. Model:'https://schema.org/DateTime'. A timestamp which denotes when the device was installed (if it requires installation).";
   sh:name "dateInstalled";

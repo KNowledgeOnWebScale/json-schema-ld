@@ -12,7 +12,7 @@
 
 gbfsshape:system_pricing_plansjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#system_pricing_plansjson>.
-gbfs:system_pricing_plansjsonShape sh:property [
+gbfsshape:system_pricing_plansjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,14 +43,14 @@ gbfs:system_pricing_plansjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:plans;
   sh:name "plans";
   sh:minCount 1
 ].
-gbfs:PlanShape rdf:type sh:NodeShape;
+gbfsshape:PlanShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Plan;
     sh:property [
   sh:path gbfs:plan_id;
@@ -106,7 +106,7 @@ gbfs:PlanShape rdf:type sh:NodeShape;
   sh:description "Array of segments when the price is a function of distance travelled, displayed in kilometers (added in v2.1-RC2).";
   sh:name "per_km_pricing"
 ].
-gbfs:PerKmPricingShape rdf:type sh:NodeShape;
+gbfsshape:PerKmPricingShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:PerKmPricing;
     sh:property [
   sh:path gbfs:start;
@@ -138,12 +138,12 @@ gbfs:PerKmPricingShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:integer
 ].
-gbfs:PlanShape sh:property [
+gbfsshape:PlanShape sh:property [
   sh:path gbfs:per_min_pricing;
   sh:description "Array of segments when the price is a function of time travelled, displayed in minutes (added in v2.1-RC2).";
   sh:name "per_min_pricing"
 ].
-gbfs:PerMinPricingShape rdf:type sh:NodeShape;
+gbfsshape:PerMinPricingShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:PerMinPricing;
     sh:property [
   sh:path gbfs:start;
@@ -175,7 +175,7 @@ gbfs:PerMinPricingShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:integer
 ].
-gbfs:PlanShape sh:property [
+gbfsshape:PlanShape sh:property [
   sh:path gbfs:surge_pricing;
   sh:description "Is there currently an increase in price in response to increased demand in this pricing plan? (added in v2.1-RC2)";
   sh:name "surge_pricing";

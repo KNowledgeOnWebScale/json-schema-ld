@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/PrintQueue/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/PrintQueue/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:rt;
   sh:name "rt";
   sh:in (sdm:oic.r.printer.queue);
@@ -40,7 +40,8 @@ sdm:QueueShape rdf:type sh:NodeShape;
   sh:maxCount 1;
   sh:maxLength 256;
   sh:datatype xsd:anyURI
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:n;
   sh:description "Property. Friendly name of the Resource";
   sh:name "n";

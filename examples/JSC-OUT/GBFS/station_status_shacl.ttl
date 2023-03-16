@@ -12,7 +12,7 @@
 
 gbfsshape:station_statusjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#station_statusjson>.
-gbfs:station_statusjsonShape sh:property [
+gbfsshape:station_statusjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,14 +43,14 @@ gbfs:station_statusjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:stations;
   sh:name "stations";
   sh:minCount 1
 ].
-gbfs:StationShape rdf:type sh:NodeShape;
+gbfsshape:StationShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Station;
     sh:property [
   sh:path gbfs:station_id;
@@ -72,7 +72,7 @@ gbfs:StationShape rdf:type sh:NodeShape;
   sh:description "Array of objects displaying the total number of each vehicle type at the station (added in v2.1-RC).";
   sh:name "vehicle_types_available"
 ].
-gbfs:VehicleTypesAvailableShape rdf:type sh:NodeShape;
+gbfsshape:VehicleTypesAvailableShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:VehicleTypesAvailable;
     sh:property [
   sh:path gbfs:vehicle_type_id;
@@ -90,7 +90,7 @@ gbfs:VehicleTypesAvailableShape rdf:type sh:NodeShape;
   sh:minInclusive 0;
   sh:datatype xsd:integer
 ].
-gbfs:StationShape sh:property [
+gbfsshape:StationShape sh:property [
   sh:path gbfs:num_bikes_disabled;
   sh:description "Number of disabled vehicles of any type at the station.";
   sh:name "num_bikes_disabled";
@@ -142,7 +142,7 @@ gbfs:StationShape sh:property [
   sh:description "Object displaying available docks by vehicle type (added in v2.1-RC).";
   sh:name "vehicle_docks_available"
 ].
-gbfs:VehicleDocksAvailableShape rdf:type sh:NodeShape;
+gbfsshape:VehicleDocksAvailableShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:VehicleDocksAvailable;
     sh:property [
   sh:path gbfs:vehicle_type_ids;

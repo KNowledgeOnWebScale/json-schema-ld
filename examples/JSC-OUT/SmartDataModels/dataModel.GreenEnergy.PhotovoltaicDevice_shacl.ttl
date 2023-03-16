@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/data-models.Energy/PhotovoltaicDevice/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/data-models.Energy/PhotovoltaicDevice/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be PhotovoltaicDevice";
   sh:name "type";
@@ -121,7 +121,8 @@ sdm:CellDimensionShape rdf:type sh:NodeShape;
   sh:name "thickness";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:moduleNbCells;
   sh:description "Property. Number of 'cells' per 'module'. Model:'https://schema.org/Number'";
   sh:name "moduleNbCells";
@@ -148,7 +149,8 @@ sdm:ModuleDimensionShape rdf:type sh:NodeShape;
   sh:name "thickness";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:PanelNbModules;
   sh:description "Property. Number of 'Modules' per 'Panel'. Model:'https://schema.org/Number'";
   sh:name "PanelNbModules";
@@ -175,7 +177,8 @@ sdm:PanelDimensionShape rdf:type sh:NodeShape;
   sh:name "thickness";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:panelWeight;
   sh:description "Property. Weight of a panel (Sometime the reference used is Kg / m²). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KGM** represents Kilogram. Model:'https://schema.org/Number'. Units:'kilograms'";
   sh:name "panelWeight";
@@ -208,7 +211,8 @@ sdm:MaxPressureLoadShape rdf:type sh:NodeShape;
   sh:name "wind";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:NominalPower;
   sh:description "Property. Nominal Power for the **panel**. This is the same value of items [Pmax] for [moduleSTC] attribute. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **WTT** represents Watt. Model:'https://schema.org/Number'. Units:'watts'";
   sh:name "NominalPower";
@@ -277,7 +281,8 @@ sdm:ModuleSTCShape rdf:type sh:NodeShape;
   sh:name "Isc";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:moduleNOCT;
   sh:description "Property. Normal Operating Cell Temperature measurements. The format is structured by a sub-property of 5 items. Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc in Volt. Isc in Ampere. Model:'https://schema.org/StructuredValue'";
   sh:name "moduleNOCT"
@@ -309,7 +314,8 @@ sdm:ModuleNOCTShape rdf:type sh:NodeShape;
   sh:name "Isc";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:moduleYieldRate;
   sh:description "Property. Positioning of the device in relation to a ground reference system. A unique value. Model:'https://schema.org/Number'";
   sh:name "moduleYieldRate";
@@ -332,7 +338,8 @@ sdm:PanelOperatingTemperatureShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:cellOperatingTemperature;
   sh:description "Property. This is the nominal operating temperature range of the cells in which it collects solar energy. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius. Model:'https://schema.org/StructuredValue'. Units:'Degree Celsius'";
   sh:name "cellOperatingTemperature"
@@ -349,7 +356,8 @@ sdm:CellOperatingTemperatureShape rdf:type sh:NodeShape;
   sh:name "max";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:temperatureCoefficient;
   sh:description "Property.  Temperature influence coefficient on the panel. The format is structured by a sub-property of 3 items. Model:'https://schema.org/StructuredValue'. Pmax in Watt. Uoc in Volt. Isc in Ampere";
   sh:name "temperatureCoefficient"
@@ -371,7 +379,8 @@ sdm:TemperatureCoefficientShape rdf:type sh:NodeShape;
   sh:name "Isc";
   sh:minInclusive 0;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:performanceLowIrradiance;
   sh:description "Property. Average relative yield to Performance at Low Irradiance. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent. Model:'https://schema.org/Number'";
   sh:name "performanceLowIrradiance";

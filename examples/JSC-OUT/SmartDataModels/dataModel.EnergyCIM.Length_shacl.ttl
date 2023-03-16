@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModels.CIMEnergyClasses/Length/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModels.CIMEnergyClasses/Length/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI type. It has to be Length";
   sh:name "type";

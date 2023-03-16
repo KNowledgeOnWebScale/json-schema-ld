@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Streetlighting/Streetlight/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Streetlighting/Streetlight/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be Streetlight";
   sh:name "type";
@@ -224,7 +224,8 @@ sdm:MunicipalityInfoShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation.";
   sh:name "wardNum";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:deviceInfo;
   sh:description "Property. Model:'https://schema.org/Text. Information about the device associated with the observations.";
   sh:name "deviceInfo"

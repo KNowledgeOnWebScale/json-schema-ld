@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Hazard/schema.json>;
-    sh:property [
+    sh:targetClass <https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Hazard/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It must be equal to Hazard.";
   sh:name "type";
@@ -51,7 +51,8 @@ sdm:ContentInformationShape rdf:type sh:NodeShape;
   sh:path sdm:color;
   sh:name "color";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:isAffectedByEO;
   sh:or ([
   sh:minLength 1;

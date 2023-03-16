@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/data-models/specs/WasteWaterTreatment/WasteWaterTank/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/data-models/specs/WasteWaterTreatment/WasteWaterTank/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI-LD Entity Type. It has to be WasteWaterTank";
   sh:name "type";
@@ -42,7 +42,8 @@ sdm:PowerShape rdf:type sh:NodeShape;
   sh:description "Property. Model: https://schema.org/Number. Units: 'kW'. Power estimated by a model.";
   sh:name "estimated";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:airflow;
   sh:description "Property. Object defining the actual and estimated airflow";
   sh:name "airflow"
@@ -59,7 +60,8 @@ sdm:AirflowShape rdf:type sh:NodeShape;
   sh:description "Property. Model: https://schema.org/Number. Units: 'm/s'. Airflow estimated by a model.";
   sh:name "estimated";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:startsAt;
   sh:description "Relationship. A relationship indicating the entity the tank is connected to in the upstream point";
   sh:name "startsAt";

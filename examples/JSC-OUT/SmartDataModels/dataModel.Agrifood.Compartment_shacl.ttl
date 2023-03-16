@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. it has to be Compartment";
   sh:name "type";
@@ -35,7 +35,8 @@ sdm:AdditionalInfoShape rdf:type sh:NodeShape;
   sh:path sdm:value;
   sh:name "value";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:arrivalTimestamp;
   sh:description "Property. Model:'https://schema.org/Datetime'. Date and Time at which the animal were inserted in the compartment";
   sh:name "arrivalTimestamp";

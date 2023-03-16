@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.COVID19/EUProofOfVaccination/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.COVID19/EUProofOfVaccination/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI entity type. It has to be EUProofOfVaccination";
   sh:name "type";
@@ -59,7 +59,8 @@ sdm:NamShape rdf:type sh:NodeShape;
   sh:maxLength 80;
   sh:pattern "^[A-Z<]*$";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:dob;
   sh:description "Property. Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty";
   sh:name "dob";
@@ -127,7 +128,8 @@ sdm:VShape rdf:type sh:NodeShape;
   sh:name "ci";
   sh:maxLength 80;
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:t;
   sh:description "Property. Test Group";
   sh:name "t"
@@ -203,7 +205,8 @@ sdm:TShape rdf:type sh:NodeShape;
   sh:maxCount 1;
   sh:maxLength 80;
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:r;
   sh:description "Recovery Group";
   sh:name "r"

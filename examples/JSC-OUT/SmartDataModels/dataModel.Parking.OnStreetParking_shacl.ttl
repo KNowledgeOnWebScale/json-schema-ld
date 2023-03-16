@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. Entity type. It must be equal to OnStreetParking";
   sh:name "type";
@@ -38,8 +38,8 @@
   sh:name "permitActiveHours"
 ].
 sdm:PermitActiveHourShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:PermitActiveHour;
-    sh:property [
+    sh:targetClass sdm:PermitActiveHour.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:maximumParkingDuration;
   sh:description "Property. Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.";
   sh:name "maximumParkingDuration";
@@ -161,7 +161,8 @@ sdm:FourWheelerSlotShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.";
   sh:name "occupiedSlotNumber";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:unclassifiedSlots;
   sh:description "Property. Model:'https://schema.org/Text. Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.";
   sh:name "unclassifiedSlots"
@@ -183,7 +184,8 @@ sdm:UnclassifiedSlotShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.";
   sh:name "occupiedSpotNumber";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:twoWheelerSlots;
   sh:description "Property. Model:'https://schema.org/Text. Two wheeler parking spot availability status in parking site corresponding to this observation.";
   sh:name "twoWheelerSlots"
@@ -205,7 +207,8 @@ sdm:TwoWheelerSlotShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.";
   sh:name "occupiedSpotNumber";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:municipalityInfo;
   sh:description "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.";
   sh:name "municipalityInfo"

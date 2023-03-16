@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be TransitManagement";
   sh:name "type";
@@ -52,7 +52,8 @@ sdm:TripDetailShape rdf:type sh:NodeShape;
   sh:description "Property. Momentary speed measured by the vehicle, in meters per second. Units:'meters per second'";
   sh:name "speed";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:position;
   sh:description "Property. Describes the current position of the vehicle corresponding to this observation. SameAs: position field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition). Model:'https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition'";
   sh:name "position"
@@ -84,7 +85,8 @@ sdm:PositionShape rdf:type sh:NodeShape;
   sh:description "Property. Momentary speed measured by the vehicle, in meters per second. Units:'meters per second'";
   sh:name "speed";
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:trip_delay;
   sh:description "Property. This can be positive and negative in seconds and shows how much the vehicle deviates from the planned one. SameAs: 'delay' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)";
   sh:name "trip_delay";
@@ -136,7 +138,8 @@ sdm:StopSequenceDetailShape rdf:type sh:NodeShape;
   sh:description "Property. Must be the same as in stops.txt in the corresponding GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate - both fields cannot be empty.";
   sh:name "stop_id";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:stop_time_update;
   sh:description "Property. Additional information on the vehicle that is serving this trip.";
   sh:name "stop_time_update"
@@ -170,7 +173,8 @@ sdm:ArrivalShape rdf:type sh:NodeShape;
   sh:description "Property. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent).";
   sh:name "uncertainty";
   sh:datatype xsd:decimal
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:departure;
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate - both fields cannot be empty. arrival and departure may both be empty when schedule_relationship is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must be empty.";
   sh:name "departure"
@@ -182,7 +186,8 @@ sdm:DepartureShape rdf:type sh:NodeShape;
   sh:description "Property. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent).";
   sh:name "uncertainty";
   sh:datatype xsd:decimal
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:trip_update;
   sh:description "Property. Describes the trip information like delay, departures, etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity).";
   sh:name "trip_update"
@@ -223,7 +228,8 @@ sdm:ArrivalShape rdf:type sh:NodeShape;
   sh:description "Property. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent).";
   sh:name "uncertainty";
   sh:datatype xsd:decimal
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:departure;
   sh:description "Property. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate - both fields cannot be empty. arrival and departure may both be empty when schedule_relationship is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must be empty.";
   sh:name "departure"
@@ -235,7 +241,8 @@ sdm:DepartureShape rdf:type sh:NodeShape;
   sh:description "Property. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent).";
   sh:name "uncertainty";
   sh:datatype xsd:decimal
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:timestamp;
   sh:description "Property. Last reported time of observation from the vehicle. SameAs: 'timestamp' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "timestamp";
@@ -262,7 +269,8 @@ sdm:VehicleDescShape rdf:type sh:NodeShape;
   sh:description "Property. Gives the License Plate number of the vehice.SameAs: 'license_plate' field from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor).";
   sh:name "license_plate";
   sh:datatype xsd:string
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:trip;
   sh:description "Property. Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).";
   sh:name "trip"
@@ -299,7 +307,8 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:description "Property. Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).";
   sh:name "trip_id";
   sh:datatype xsd:string
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:vehicle_id;
   sh:description "Property. Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)";
   sh:name "vehicle_id";
@@ -346,7 +355,8 @@ sdm:ArrivalShape rdf:type sh:NodeShape;
   sh:description "Property. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent).";
   sh:name "uncertainty";
   sh:datatype xsd:decimal
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:current_status;
   sh:description "Property. Describes the status of the vehicle w.r.t the stop corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]. SameAs:'current_status' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)";
   sh:name "current_status";
@@ -423,7 +433,8 @@ sdm:VehicleDescShape rdf:type sh:NodeShape;
   sh:description "Property. Gives the License Plate number of the vehice.SameAs: 'license_plate' field from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor).";
   sh:name "license_plate";
   sh:datatype xsd:string
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:route_long_name;
   sh:description "Property. Full name of a route. This name is more descriptive than the routeShortName and often includes the route's destination or stop. This mostly includes the to and from destination names of the route. SameAs: 'route_long_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)";
   sh:name "route_long_name";
@@ -470,7 +481,8 @@ sdm:TripDetailShape rdf:type sh:NodeShape;
   sh:description "Property. Specifies the departure time from a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'departure_time' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt).";
   sh:name "departure_time";
   sh:datatype xsd:time
-], [
+].
+sdm:StopTimeUpdateShape sh:property [
   sh:path sdm:agency_name;
   sh:description "Property. The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)";
   sh:name "agency_name";
@@ -493,8 +505,8 @@ sdm:VehiclePositionShape rdf:type sh:NodeShape;
   sh:name "position"
 ].
 sdm:PositionShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Position;
-    sh:property [
+    sh:targetClass sdm:Position.
+sdm:VehiclePositionShape sh:property [
   sh:path sdm:current_status;
   sh:description "Property. Describes the status of the vehicle w.r.t the stop corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]. SameAs:'current_status' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "current_status";
@@ -526,7 +538,8 @@ sdm:VehicleDescShape rdf:type sh:NodeShape;
   sh:description "Property. Gives the License Plate number of the vehice.SameAs: 'license_plate' field from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor).";
   sh:name "license_plate";
   sh:datatype xsd:string
-], [
+].
+sdm:VehiclePositionShape sh:property [
   sh:path sdm:stop_id;
   sh:description "Property. Stop ID/Stop name of the bus stops corresponding to the bus in this observation. SameAs: 'stop_id' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).";
   sh:name "stop_id";
@@ -573,7 +586,8 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:description "Property. Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).";
   sh:name "trip_id";
   sh:datatype xsd:string
-], [
+].
+sdm:VehiclePositionShape sh:property [
   sh:path sdm:license_plate;
   sh:description "Property. Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)";
   sh:name "license_plate";
@@ -655,7 +669,8 @@ sdm:DepartureShape rdf:type sh:NodeShape;
   sh:description "Property. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent).";
   sh:name "uncertainty";
   sh:datatype xsd:decimal
-], [
+].
+sdm:VehiclePositionShape sh:property [
   sh:path sdm:ac_available;
   sh:description "Property. Describes the presence of air conditioning option in the vehicle corresponding to this observation.";
   sh:name "ac_available";
@@ -721,7 +736,8 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:description "Property. Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).";
   sh:name "trip_id";
   sh:datatype xsd:string
-], [
+].
+sdm:VehiclePositionShape sh:property [
   sh:path sdm:last_stop_id;
   sh:description "Property. Stop ID/Stop name of the previous bus stop corresponding to the bus in this observation. SameAs: 'stop_id' field from GTFS Realtime message-VehiclePosition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)";
   sh:name "last_stop_id";
@@ -843,7 +859,8 @@ sdm:TripShape rdf:type sh:NodeShape;
   sh:path sdm:schedule_relationship;
   sh:name "schedule_relationship";
   sh:in (sdm:SCHEDULED sdm:ADDED sdm:UNSCHEDULED sdm:CANCELED)
-], [
+].
+sdm:TripUpdateShape sh:property [
   sh:path sdm:observationDateTime;
   sh:description "Property. Last reported time of observation.";
   sh:name "observationDateTime";

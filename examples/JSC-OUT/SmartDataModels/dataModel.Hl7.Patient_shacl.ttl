@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.HL7/Patient/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.HL7/Patient/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:resourceType;
   sh:description "Property. This is a Patient resource";
   sh:name "resourceType";
@@ -16006,6 +16006,10 @@ sdm:RepeatShape rdf:type sh:NodeShape;
   sh:name "_timeOfDay";
   sh:datatype xsd:string
 ], [
+  sh:path sdm:when;
+  sh:name "when";
+  sh:in (sdm:MORN sdm:MORN.early sdm:MORN.late sdm:NOON sdm:AFT sdm:AFT.early sdm:AFT.late sdm:EVE sdm:EVE.early sdm:EVE.late sdm:NIGHT sdm:PHS sdm:HS sdm:WAKE sdm:C sdm:CM sdm:CD sdm:CV sdm:AC sdm:ACM sdm:ACD sdm:ACV sdm:PC sdm:PCM sdm:PCD sdm:PCV)
+], [
   sh:path sdm:_when;
   sh:name "_when";
   sh:datatype xsd:string
@@ -22271,6 +22275,10 @@ sdm:RepeatShape rdf:type sh:NodeShape;
   sh:path sdm:_timeOfDay;
   sh:name "_timeOfDay";
   sh:datatype xsd:string
+], [
+  sh:path sdm:when;
+  sh:name "when";
+  sh:in (sdm:MORN sdm:MORN.early sdm:MORN.late sdm:NOON sdm:AFT sdm:AFT.early sdm:AFT.late sdm:EVE sdm:EVE.early sdm:EVE.late sdm:NIGHT sdm:PHS sdm:HS sdm:WAKE sdm:C sdm:CM sdm:CD sdm:CV sdm:AC sdm:ACM sdm:ACD sdm:ACV sdm:PC sdm:PCM sdm:PCD sdm:PCV)
 ], [
   sh:path sdm:_when;
   sh:name "_when";

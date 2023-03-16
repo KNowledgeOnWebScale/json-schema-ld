@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleTMS/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleTMS/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity identifier. It has to be UnmannedAerialVehicleTMS";
   sh:name "type";
@@ -37,7 +37,8 @@ sdm:SoftwareApplicationShape rdf:type sh:NodeShape;
   sh:path sdm:applicationCategory;
   sh:name "applicationCategory";
   sh:datatype xsd:string
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:operationalInstance;
   sh:description "Property. URL linking to an operational instance (assumed to be web based) for the UAV Traffic Management Software.";
   sh:name "operationalInstance";

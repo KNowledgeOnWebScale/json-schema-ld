@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/MuscleOxygenSaturation/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/MuscleOxygenSaturation/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:muscleoxygensaturation;
   sh:description "Property. This Property describes the muscle oxygen saturation (SmO2), which is the percentage of hemoglobin that is saturated with oxygen in the capillaries of a muscle. The unit is percentage.";
   sh:name "muscleoxygensaturation";

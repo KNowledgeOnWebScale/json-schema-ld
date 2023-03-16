@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModels.CIMEnergyClasses/ControlArea/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModels.CIMEnergyClasses/ControlArea/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. The primary type of control area definition used to determine if this is used for automatic generation control, for planning interchange control, or other purposes. A control area specified with primary type of automatic generation control could still be forecast and used as an interchange area in power flow analysis. Default: None. NGSI entity type. it has to be ControlArea";
   sh:name "type";

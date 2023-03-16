@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be WeatherForecast";
   sh:name "type";
@@ -53,15 +53,15 @@
   sh:name "dayMaximum"
 ].
 sdm:DayMaximumShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:DayMaximum;
-    sh:property [
+    sh:targetClass sdm:DayMaximum.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:dayMinimum;
   sh:description "Property. Model:'https://schema.org/Text'. Minimum values forecasted for the reported period.  Minimum values for the reported period. Subattributes:- `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`";
   sh:name "dayMinimum"
 ].
 sdm:DayMinimumShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:DayMinimum;
-    sh:property [
+    sh:targetClass sdm:DayMinimum.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:uVIndexMax;
   sh:description "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. Normative references: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)";
   sh:name "uVIndexMax";

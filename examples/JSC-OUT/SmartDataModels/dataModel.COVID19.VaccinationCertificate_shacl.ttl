@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/datamodel.COVID19/VaccinationCertificate/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/datamodel.COVID19/VaccinationCertificate/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NSGI Entity Type. it has to be VaccinationCertificate";
   sh:name "type";
@@ -96,7 +96,8 @@ sdm:RecipientShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Date'. this rule applies to. The date on which the vaccine recipient was born";
   sh:name "birthDate";
   sh:datatype xsd:date
-], [
+].
+sdm:CredentialSubjectShape sh:property [
   sh:path sdm:vaccine;
   sh:description "Property. Generic description of the vaccine/prophylaxis or its component(s)";
   sh:name "vaccine"
@@ -123,7 +124,8 @@ sdm:VaccineShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Text'. Marketing Authorization Holder";
   sh:name "marketingAuthorizationHolder";
   sh:datatype xsd:string
-], [
+].
+sdm:CredentialSubjectShape sh:property [
   sh:path sdm:proof;
   sh:description "Property. Proof of Immunization";
   sh:name "proof"

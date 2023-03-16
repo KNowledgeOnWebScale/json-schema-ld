@@ -50,8 +50,26 @@ gbfs:version dcterms:description "The semantic version of the feed in the form X
     rdfs:domain gbfs:Version.
 gbfs:Version rdf:type skos:ConceptScheme.
 gbfs:version rdfs:range [
-  owl:oneOf ()
+  owl:oneOf (gbfs:1.0 gbfs:1.1 gbfs:2.0 gbfs:2.1 gbfs:2.2 gbfs:2.3)
 ].
+gbfs:1.0 rdf:type skos:Concept;
+    skos:inScheme gbfs:Version;
+    rdfs:label "1.0".
+gbfs:1.1 rdf:type skos:Concept;
+    skos:inScheme gbfs:Version;
+    rdfs:label "1.1".
+gbfs:2.0 rdf:type skos:Concept;
+    skos:inScheme gbfs:Version;
+    rdfs:label "2.0".
+gbfs:2.1 rdf:type skos:Concept;
+    skos:inScheme gbfs:Version;
+    rdfs:label "2.1".
+gbfs:2.2 rdf:type skos:Concept;
+    skos:inScheme gbfs:Version;
+    rdfs:label "2.2".
+gbfs:2.3 rdf:type skos:Concept;
+    skos:inScheme gbfs:Version;
+    rdfs:label "2.3".
 gbfs:url dcterms:description "URL of the corresponding gbfs.json endpoint";
     rdf:type rdf:Property;
     rdfs:label "url";

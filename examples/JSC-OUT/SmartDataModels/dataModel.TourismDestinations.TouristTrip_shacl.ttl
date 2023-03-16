@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. It has to be TouristTrip. NGSI Entity type.";
   sh:name "type";
@@ -186,7 +186,8 @@ sdm:TripScheduleShape rdf:type sh:NodeShape;
   sh:path sdm:endTime;
   sh:name "endTime";
   sh:datatype xsd:dateTime
-], [
+].
+sdm:ItineraryShape sh:property [
   sh:path sdm:duration;
   sh:description "Property. The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.";
   sh:name "duration";
@@ -206,7 +207,8 @@ sdm:PitchShape rdf:type sh:NodeShape;
   sh:path sdm:article;
   sh:name "article";
   sh:datatype xsd:string
-], [
+].
+sdm:ItineraryShape sh:property [
   sh:path sdm:webSite;
   sh:description "Property. Link to the official website for more information.";
   sh:name "webSite";
@@ -279,7 +281,8 @@ sdm:StarRatingDetailedShape rdf:type sh:NodeShape;
   sh:path sdm:10;
   sh:name "10";
   sh:datatype xsd:decimal
-], [
+].
+sdm:CriticReviewShape sh:property [
   sh:path sdm:audience;
   sh:name "audience";
   sh:in (sdm:adult sdm:allPublic sdm:children sdm:family sdm:senior sdm:teenager)

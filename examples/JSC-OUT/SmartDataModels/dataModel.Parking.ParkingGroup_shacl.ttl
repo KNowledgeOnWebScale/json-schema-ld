@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be ParkingGroup";
   sh:name "type";
@@ -60,8 +60,8 @@
   sh:name "permitActiveHours"
 ].
 sdm:PermitActiveHourShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:PermitActiveHour;
-    sh:property [
+    sh:targetClass sdm:PermitActiveHour.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:reservationType;
   sh:description "Property. Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Enum:'mandatory, notAvailable, optional, partly'.";
   sh:name "reservationType";

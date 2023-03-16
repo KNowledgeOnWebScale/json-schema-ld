@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://github.com/smart-data-models/incubated/dataModel.OSLO/raw/master/BicycleParkingStation/schema.json>;
-    sh:property [
+    sh:targetClass <https://github.com/smart-data-models/incubated/dataModel.OSLO/raw/master/BicycleParkingStation/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be BicycleParkingStation";
   sh:name "type";
@@ -42,7 +42,8 @@ sdm:ParkingFacility.capacityShape rdf:type sh:NodeShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:decimal
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:InfrastructureElement.geometry;
   sh:description "Property. Model:'http://www.w3.org/ns/locn#geometry'. The geometry corresponding to the infrastructure element.";
   sh:name "InfrastructureElement.geometry";

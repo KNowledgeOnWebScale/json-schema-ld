@@ -12,7 +12,7 @@
 
 gbfsshape:gbfsjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#gbfsjson>.
-gbfs:gbfsjsonShape sh:property [
+gbfsshape:gbfsjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,20 +43,20 @@ gbfs:gbfsjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:feeds;
   sh:description "An array of all of the feeds that are published by the auto-discovery file. Each element in the array is an object with the keys below.";
   sh:name "feeds"
 ].
-gbfs:FeedShape rdf:type sh:NodeShape;
+gbfsshape:FeedShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Feed;
     sh:property [
   sh:path gbfs:name;
   sh:description "Key identifying the type of feed this is. The key must be the base file name defined in the spec for the corresponding feed type.";
   sh:name "name";
-  sh:in ();
+  sh:in (gbfs:gbfs gbfs:gbfs_versions gbfs:system_information gbfs:vehicle_types gbfs:station_information gbfs:station_status gbfs:free_bike_status gbfs:system_hours gbfs:system_alerts gbfs:system_calendar gbfs:system_regions gbfs:system_pricing_plans gbfs:geofencing_zones);
   sh:minCount 1;
   sh:maxCount 1
 ], [

@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. it has to be Pen";
   sh:name "type";
@@ -34,7 +34,8 @@ sdm:AdditionalInfoShape rdf:type sh:NodeShape;
 ], [
   sh:path sdm:value;
   sh:or ([ sh:datatype xsd:string ] [ sh:datatype xsd:decimal ] [ sh:datatype xsd:boolean ])
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:arrivalTimestamp;
   sh:description "Property. Model:'https://schema.org/DateTime'. Date and Time for the arrival of animals to the Pen";
   sh:name "arrivalTimestamp";

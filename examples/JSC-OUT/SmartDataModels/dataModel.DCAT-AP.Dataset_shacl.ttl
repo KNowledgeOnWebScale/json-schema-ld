@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://github.com/smart-data-models/dataModel.DCAT-AP/blob/master/Dataset/schema.json>;
-    sh:property [
+    sh:targetClass <https://github.com/smart-data-models/dataModel.DCAT-AP/blob/master/Dataset/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI type. It has to be Dataset";
   sh:name "type";

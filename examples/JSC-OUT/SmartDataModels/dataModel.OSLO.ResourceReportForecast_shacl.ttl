@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://github.com/smart-data-models/dataModel.OSLO/raw/master/ResourceReport/schema.json>;
-    sh:property [
+    sh:targetClass <https://github.com/smart-data-models/dataModel.OSLO/raw/master/ResourceReport/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be ResourceReportForecast";
   sh:name "type";
@@ -40,7 +40,8 @@ sdm:ResourceReport.actuatorShape rdf:type sh:NodeShape;
   sh:in (sdm:combustionEngine sdm:electric sdm:electricWithSupport sdm:human);
   sh:minCount 1;
   sh:maxCount 1
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.location;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#location'. Location of the Resource. This could be a bike parking station or the real-time location of the vehicle, e.g. in free-floating part transport.";
   sh:name "ResourceReport.location"
@@ -57,7 +58,8 @@ sdm:ResourceReport.locationShape rdf:type sh:NodeShape;
   sh:path sdm:object;
   sh:name "object";
   sh:datatype xsd:anyURI
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.meansOfTransport;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#Mobiliteitsdienst.vervoermiddel'. The type of means of transport of the Resource.";
   sh:name "ResourceReport.meansOfTransport"
@@ -77,7 +79,8 @@ sdm:ResourceReport.meansOfTransportShape rdf:type sh:NodeShape;
   sh:in (sdm:airplane sdm:bicycle sdm:boat sdm:bus sdm:car sdm:escalator sdm:lift sdm:motorcycle sdm:onFoot sdm:pedelec sdm:scooter sdm:skateboard sdm:step sdm:subway sdm:train sdm:tram sdm:treadmill sdm:truck);
   sh:minCount 1;
   sh:maxCount 1
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.number;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#number'. The number of resources.";
   sh:name "ResourceReport.number";
@@ -106,7 +109,8 @@ sdm:ResourceReport.serviceShape rdf:type sh:NodeShape;
   sh:path sdm:object;
   sh:name "object";
   sh:datatype xsd:anyURI
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.status;
   sh:description "Property. Model:'https://purl.eu/ns/mobility/passenger-transport-hubs#status'. State of a Resource. E.g. reserved, inactive, available. Determines whether a resource can be used.";
   sh:name "ResourceReport.status"
@@ -126,7 +130,8 @@ sdm:ResourceReport.statusShape rdf:type sh:NodeShape;
   sh:in (sdm:available sdm:deleted sdm:inactive sdm:inUse sdm:relocated sdm:reserved sdm:unavailable);
   sh:minCount 1;
   sh:maxCount 1
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:ResourceReport.type;
   sh:description "Property. Model:'http://purl.org/dc/terms/type'. Nature of the Resource.";
   sh:name "ResourceReport.type"
@@ -146,7 +151,8 @@ sdm:ResourceReport.typeShape rdf:type sh:NodeShape;
   sh:in (sdm:chargingStation sdm:parkingSpace sdm:room sdm:seating sdm:vehicle);
   sh:minCount 1;
   sh:maxCount 1
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:validity;
   sh:description "Property. Model:'https://schema.org/Text'. Includes the validity period for this forecast as a ISO8601 time interval. It can be also used two separate attributes: `validFrom`, `validTo`.";
   sh:name "validity";

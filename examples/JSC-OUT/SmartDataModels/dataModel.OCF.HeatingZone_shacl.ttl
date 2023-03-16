@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/HeatingZone/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.IoTDataModels/HeatingZone/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:rt;
   sh:name "rt";
   sh:in (sdm:oic.r.heatingzone);

@@ -12,7 +12,7 @@
 
 gbfsshape:station_informationjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#station_informationjson>.
-gbfs:station_informationjsonShape sh:property [
+gbfsshape:station_informationjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,14 +43,14 @@ gbfs:station_informationjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:stations;
   sh:name "stations";
   sh:minCount 1
 ].
-gbfs:StationShape rdf:type sh:NodeShape;
+gbfsshape:StationShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Station;
     sh:property [
   sh:path gbfs:station_id;
@@ -112,7 +112,7 @@ gbfs:StationShape rdf:type sh:NodeShape;
 ], [
   sh:path gbfs:rental_methods;
   sh:name "rental_methods";
-  sh:in ()
+  sh:in (gbfs:key gbfs:creditcard gbfs:paypass gbfs:applepay gbfs:androidpay gbfs:transitcard gbfs:accountnumber gbfs:phone)
 ], [
   sh:path gbfs:is_virtual_station;
   sh:description "Is this station a location with or without physical infrastructure? (added in v2.1-RC)";
@@ -123,19 +123,19 @@ gbfs:StationShape rdf:type sh:NodeShape;
   sh:description "A multipolygon that describes the area of a virtual station (added in v2.1-RC).";
   sh:name "station_area"
 ].
-gbfs:StationAreaShape rdf:type sh:NodeShape;
+gbfsshape:StationAreaShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:StationArea;
     sh:property [
   sh:path gbfs:type;
   sh:name "type";
-  sh:in ();
+  sh:in (gbfs:MultiPolygon);
   sh:minCount 1;
   sh:maxCount 1
 ], [
   sh:path gbfs:parking_type;
   sh:description "Type of parking station. Added in v2.3";
   sh:name "parking_type";
-  sh:in ()
+  sh:in (gbfs:parking_lot gbfs:street_parking gbfs:underground_parking gbfs:sidewalk_parking gbfs:other)
 ], [
   sh:path gbfs:parking_hoop;
   sh:description "Are parking hoops present at this station? Added in v2.3";
@@ -157,9 +157,9 @@ gbfs:StationAreaShape rdf:type sh:NodeShape;
   sh:description "An object where each key is a vehicle_type_id and the value is a number presenting the total number of vehicles of this type that can park within the station_area (added in v2.1-RC).";
   sh:name "vehicle_capacity"
 ].
-gbfs:VehicleCapacityShape rdf:type sh:NodeShape;
+gbfsshape:VehicleCapacityShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:VehicleCapacity.
-gbfs:StationAreaShape sh:property [
+gbfsshape:StationAreaShape sh:property [
   sh:path gbfs:is_valet_station;
   sh:description "Are valet services provided at this station? (added in v2.1-RC)";
   sh:name "is_valet_station";
@@ -174,7 +174,7 @@ gbfs:StationAreaShape sh:property [
   sh:description "Contains rental uris for Android, iOS, and web in the android, ios, and web fields (added in v1.1).";
   sh:name "rental_uris"
 ].
-gbfs:RentalUriShape rdf:type sh:NodeShape;
+gbfsshape:RentalUriShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:RentalUri;
     sh:property [
   sh:path gbfs:android;
@@ -192,10 +192,10 @@ gbfs:RentalUriShape rdf:type sh:NodeShape;
   sh:name "web";
   sh:datatype xsd:anyURI
 ].
-gbfs:StationAreaShape sh:property [
+gbfsshape:StationAreaShape sh:property [
   sh:path gbfs:vehicle_type_capacity;
   sh:description "An object where each key is a vehicle_type_id and the value is a number representing the total docking points installed at this station for each vehicle type (added in v2.1-RC).";
   sh:name "vehicle_type_capacity"
 ].
-gbfs:VehicleTypeCapacityShape rdf:type sh:NodeShape;
+gbfsshape:VehicleTypeCapacityShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:VehicleTypeCapacity.

@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI Entity type. It has to be CityWork";
   sh:name "type";
@@ -238,7 +238,8 @@ sdm:MaxAuthorizedTonnageShape rdf:type sh:NodeShape;
   sh:description "Property. Road Name";
   sh:name "roadName";
   sh:datatype xsd:string
-], [
+].
+sdm:RoadImpactedShape sh:property [
   sh:path sdm:countOfBusLineImpacted;
   sh:description "Property. Count of Bus Lines impacted by the works. Model:'https://schema.org/Number'";
   sh:name "countOfBusLineImpacted";

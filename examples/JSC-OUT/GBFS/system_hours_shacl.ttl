@@ -12,7 +12,7 @@
 
 gbfsshape:system_hoursjsonShape rdf:type sh:NodeShape;
     sh:targetClass <https://github.com/NABSA/gbfs/blob/v2.3/gbfs.md#system_hoursjson>.
-gbfs:system_hoursjsonShape sh:property [
+gbfsshape:system_hoursjsonShape sh:property [
   sh:path gbfs:last_updated;
   sh:description "Last time the data in the feed was updated in POSIX time.";
   sh:name "last_updated";
@@ -43,23 +43,23 @@ gbfs:system_hoursjsonShape sh:property [
   sh:minCount 1;
   sh:maxCount 1
 ].
-gbfs:DatumShape rdf:type sh:NodeShape;
+gbfsshape:DatumShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:Datum;
     sh:property [
   sh:path gbfs:rental_hours;
   sh:name "rental_hours";
   sh:minCount 1
 ].
-gbfs:RentalHourShape rdf:type sh:NodeShape;
+gbfsshape:RentalHourShape rdf:type sh:NodeShape;
     sh:targetClass gbfs:RentalHour;
     sh:property [
   sh:path gbfs:user_types;
   sh:name "user_types";
-  sh:in ()
+  sh:in (gbfs:member gbfs:nonmember)
 ], [
   sh:path gbfs:days;
   sh:name "days";
-  sh:in ()
+  sh:in (gbfs:sun gbfs:mon gbfs:tue gbfs:wed gbfs:thu gbfs:fri gbfs:sat)
 ], [
   sh:path gbfs:start_time;
   sh:description "Start time for the hours of operation of the system.";

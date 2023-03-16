@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.OCF/mediaSourceList/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.OCF/mediaSourceList/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:rt;
   sh:name "rt";
   sh:in (sdm:oic.r.media.input);
@@ -22,8 +22,7 @@
   sh:path sdm:sources;
   sh:description "Property. The list of sources";
   sh:name "sources";
-  sh:minCount 1;
-  sh:maxCount 1
+  sh:minCount 1
 ].
 sdm:SourceShape rdf:type sh:NodeShape;
     sh:targetClass sdm:Source;
@@ -47,7 +46,8 @@ sdm:SourceShape rdf:type sh:NodeShape;
   sh:description "Specifies if the specific source instance is selected or not";
   sh:name "status";
   sh:datatype xsd:boolean
-], [
+].
+sdm:schema.jsonShape sh:property [
   sh:path sdm:n;
   sh:description "Property. Friendly name of the Resource";
   sh:name "n";

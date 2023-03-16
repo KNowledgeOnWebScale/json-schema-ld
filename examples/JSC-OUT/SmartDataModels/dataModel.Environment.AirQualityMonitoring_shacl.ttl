@@ -12,8 +12,8 @@
 @prefix sdmshape: <https://w3id.org/sdm/shapes/schema.json#>.
 
 <https://w3id.org/sdm/shapes/schema.json#schema.jsonShape> rdf:type sh:NodeShape;
-    sh:targetClass <https://smart-data-models.github.io/dataModel.Environment/AirQualityMonitoring/schema.json>;
-    sh:property [
+    sh:targetClass <https://smart-data-models.github.io/dataModel.Environment/AirQualityMonitoring/schema.json>.
+sdm:schema.jsonShape sh:property [
   sh:path sdm:type;
   sh:description "Property. NGSI type. it has to be AirQualityMonitoring";
   sh:name "type";
@@ -94,7 +94,8 @@ sdm:DeviceModelShape rdf:type sh:NodeShape;
   sh:description "Property. Model:'https://schema.org/Text'. Area served by the entity or a service. ";
   sh:name "areaServed";
   sh:datatype xsd:string
-], [
+].
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:refDevice;
   sh:or ([
   sh:minLength 1;
@@ -142,141 +143,141 @@ sdm:DeviceModelShape rdf:type sh:NodeShape;
   sh:name "airTemperatureTSA"
 ].
 sdm:AirTemperatureTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:AirTemperatureTSA;
-    sh:property [
+    sh:targetClass sdm:AirTemperatureTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:ambientNoiseTSA;
   sh:description "Property. ambient Noise time series aggregation";
   sh:name "ambientNoiseTSA"
 ].
 sdm:AmbientNoiseTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:AmbientNoiseTSA;
-    sh:property [
+    sh:targetClass sdm:AmbientNoiseTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:arsenicTSA;
   sh:description "Property. Arsenic time series aggregation";
   sh:name "arsenicTSA"
 ].
 sdm:ArsenicTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:ArsenicTSA;
-    sh:property [
+    sh:targetClass sdm:ArsenicTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:atmosphericPressureTSA;
   sh:description "Property. Atmospheric pressure time series aggregation";
   sh:name "atmosphericPressureTSA"
 ].
 sdm:AtmosphericPressureTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:AtmosphericPressureTSA;
-    sh:property [
+    sh:targetClass sdm:AtmosphericPressureTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:bapTSA;
   sh:description "Property. Benzo(a)Pyrene time series aggregation";
   sh:name "bapTSA"
 ].
 sdm:BapTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:BapTSA;
-    sh:property [
+    sh:targetClass sdm:BapTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:benzeneTSA;
   sh:description "Property. Benzene time series aggregation";
   sh:name "benzeneTSA"
 ].
 sdm:BenzeneTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:BenzeneTSA;
-    sh:property [
+    sh:targetClass sdm:BenzeneTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:coTSA;
   sh:description "Property. Carbon monoxide time series aggregation";
   sh:name "coTSA"
 ].
 sdm:CoTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:CoTSA;
-    sh:property [
+    sh:targetClass sdm:CoTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:co2TSA;
   sh:description "Property. Carbon dioxide time series aggregation";
   sh:name "co2TSA"
 ].
 sdm:Co2TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Co2TSA;
-    sh:property [
+    sh:targetClass sdm:Co2TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:nh3TSA;
   sh:description "Property. Ammonia time series aggregation";
   sh:name "nh3TSA"
 ].
 sdm:Nh3TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Nh3TSA;
-    sh:property [
+    sh:targetClass sdm:Nh3TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:nickelTSA;
   sh:description "Property. Nickel time series aggregation";
   sh:name "nickelTSA"
 ].
 sdm:NickelTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:NickelTSA;
-    sh:property [
+    sh:targetClass sdm:NickelTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:noTSA;
   sh:description "Property. Nitrogen monoxide time series aggregation";
   sh:name "noTSA"
 ].
 sdm:NoTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:NoTSA;
-    sh:property [
+    sh:targetClass sdm:NoTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:no2TSA;
   sh:description "Property. Nitrogen dioxide time series aggregation";
   sh:name "no2TSA"
 ].
 sdm:No2TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:No2TSA;
-    sh:property [
+    sh:targetClass sdm:No2TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:o2TSA;
   sh:description "Property. Oxygen time series aggregation";
   sh:name "o2TSA"
 ].
 sdm:O2TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:O2TSA;
-    sh:property [
+    sh:targetClass sdm:O2TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:o3TSA;
   sh:description "Property. Ozone time series aggregation ";
   sh:name "o3TSA"
 ].
 sdm:O3TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:O3TSA;
-    sh:property [
+    sh:targetClass sdm:O3TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:pm10TSA;
   sh:description "Property. Particulate matter in the air with a diameter of 10 micrometers or less time series aggregation";
   sh:name "pm10TSA"
 ].
 sdm:Pm10TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Pm10TSA;
-    sh:property [
+    sh:targetClass sdm:Pm10TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:pm25TSA;
   sh:description "Property. Particulate matter in the air with a diameter of 25 micrometers or less time series aggregation";
   sh:name "pm25TSA"
 ].
 sdm:Pm25TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:Pm25TSA;
-    sh:property [
+    sh:targetClass sdm:Pm25TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:relativeHumidityTSA;
   sh:description "Property. Relative Humidity time series aggregation";
   sh:name "relativeHumidityTSA"
 ].
 sdm:RelativeHumidityTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:RelativeHumidityTSA;
-    sh:property [
+    sh:targetClass sdm:RelativeHumidityTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:so2TSA;
   sh:description "Property. Sulfur dioxide time series aggregation";
   sh:name "so2TSA"
 ].
 sdm:So2TSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:So2TSA;
-    sh:property [
+    sh:targetClass sdm:So2TSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:pbTSA;
   sh:description "Property. Lead time series aggregation";
   sh:name "pbTSA"
 ].
 sdm:PbTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:PbTSA;
-    sh:property [
+    sh:targetClass sdm:PbTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:uvTSA;
   sh:description "Property. Ultra violet radiation time series aggregation";
   sh:name "uvTSA"
 ].
 sdm:UvTSAShape rdf:type sh:NodeShape;
-    sh:targetClass sdm:UvTSA;
-    sh:property [
+    sh:targetClass sdm:UvTSA.
+sdm:DeviceInfoShape sh:property [
   sh:path sdm:illuminance;
   sh:description "Property. Measured illuminance";
   sh:name "illuminance";
