@@ -7,6 +7,7 @@
 | "$schema"           |                                       |                                 | defines which dialect of JSON Schema a JSON Schema was written for         |
 | "type": "string"    | `ex:property rdfs:range xsd:string.`  | `[sh:datatype xsd:string]`      | string-type schema                                                         |
 | "type": "number"    | `ex:property rdfs:range xsd:decimal.` | `[sh:datatype xsd:decimal]`     | accepts any numeric type, either integers or floating point numbers        |
+| "type": "integer"   | `ex:property rdfs:range xsd:integer.` | `[sh:datatype xsd:integer]`     | accepts any numeric type, either integers or floating point numbers        |
 | "type": "object"    | `ex:property rdf:type rdf:Property.`  | `[sh:path ex:property]`         | a base schema in which other type schemas wrapped                          |
 | "type": "array"     |                                       |                                 | similar to object type schema                                              |
 | "type": "boolean"   | `ex:property rdfs:range boolean.`     | `[sh:datatype xsd:boolean]`     | boolean-type schema                                                        |
