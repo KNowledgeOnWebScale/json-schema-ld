@@ -11,7 +11,7 @@ import {
     node_node_literal,
     node_node_node
 } from "../utils/n3_utils";
-import {extract_resource_from_uri, capitalizeLastFragment, generateShape} from "../utils/misc";
+import {extract_resource_from_uri, capitalizeLastFragment, generateShape, generateShapeURI} from "../utils/misc";
 import {SCHEMA_SHACL_ANNOTATION} from "../utils/SchemaKWMapping";
 const N3 = require('n3');
 const { DataFactory } = N3;
@@ -79,7 +79,7 @@ export class JSCLDSchema{
         this.rdf_writer = new N3.Writer({...this.config.rdfs_prefix,...{'format':this.config.format}});
         this.base_resource_name = extract_resource_from_uri(this.base_schema.id)
         //when base_url is ended with either '#' or '/'
-        const base_shacl_shape_uri = this.config.uri.slice(0,-1)+'/shapes/'+ this.base_resource_name + '#';
+        const base_shacl_shape_uri = generateShapeURI(this.config.uri, this.base_resource_name);
         this.shacl_shape_uri = base_shacl_shape_uri;
         const shacl_prefix = SHACL_PREFIX
         shacl_prefix.prefixes[this.config.prefix+'shape']= base_shacl_shape_uri

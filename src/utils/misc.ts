@@ -93,3 +93,14 @@ export function generateShape(prefix, uri){
     else
         return prefix + ':'+uri+'Shape'
 }
+
+/**
+ * generate shape uri based on the uri property value of a config instance
+ */
+
+export function generateShapeURI(uri:string, resource_name:string){
+    if (uri.endsWith('/') || uri.endsWith('#'))
+        return uri.slice(0,-1)+'/shapes/'+ resource_name + '#'
+    else
+        return uri+'/shapes/'+ resource_name + '#'
+}

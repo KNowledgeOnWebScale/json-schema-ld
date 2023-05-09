@@ -75,7 +75,7 @@ const usage = commandLineUsage([
         ]
     },
     {
-        content: 'Project home: {underline https://github.com/jiaoxlong/jsc-ld}'
+        content: 'Project home: {underline https://github.com/KNowledgeOnWebScale/json-schema-ld/}'
     }
 ]);
 
