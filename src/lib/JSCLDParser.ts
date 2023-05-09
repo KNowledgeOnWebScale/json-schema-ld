@@ -66,11 +66,18 @@ export class JSCLDSchema{
      * @param jsc Path to the JSON schema document
      * @param config A ConfigParser object contains all necessary configuration for parsing JSON schema.
      */
-    constructor(jsc:string, config:Config ){
+    constructor(jsc:string|{[key:string]: any}, config:Config ){
         this.config = config;
-        this.jsc = path.resolve(jsc);
+        if (typeof jsc === 'string') {
+            this.jsc = path.resolve(jsc)
+            this.data = require(jsc)
+        }
+        else if (typeof jsc === "object" && jsc !== null){
+            this.jsc = path.join(process.cwd(), 'out')
+            this.data = jsc
+        }
         /** data A JSON object parsed from the JSON schema document */
-        this.data = require(this.jsc);
+
         /** stats */
         this.stats = '';
         /** The base JSC-LD schema */
